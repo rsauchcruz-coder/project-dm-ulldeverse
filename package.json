@@ -6,6 +6,7 @@
   "main": "server_ui.js",
   "scripts": {
     "start": "node server_ui.js",
+    "build": "next build",
     "test": "npm run qa:submission",
     "qa:repo": "node scripts/qa/qa_repository_hygiene.js",
     "qa:submission": "node scripts/qa/qa_submission.js",
@@ -16,6 +17,7 @@
     "qa:runtime": "node scripts/qa/test_world_v1_runtime.js worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
     "qa:experience": "node scripts/qa/qa_experiencia_mundo.js fabrica/semillas/el_testigo_de_ulldecona_semilla_v1_2.json worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
     "qa:mobile": "node scripts/qa/qa_mobile_final_layout.js",
+    "qa:static": "node scripts/qa/qa_static_demo.js",
     "qa:http": "node scripts/qa/smoke_world_http.js worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
     "media:compile": "node scripts/media/compile_visual_manifest.js aventura_el_testigo_de_ulldecona_001",
     "media:qa": "node scripts/qa/qa_visual_manifest.js aventura_el_testigo_de_ulldecona_001",
@@ -37,6 +39,12 @@
   },
   "dependencies": {
     "express": "^5.2.1",
-    "groq-sdk": "^1.2.1"
+    "groq-sdk": "^1.2.1",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
   }
 }

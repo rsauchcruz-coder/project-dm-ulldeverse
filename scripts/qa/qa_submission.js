@@ -17,6 +17,7 @@ const checks = [
   ["Runtime adapter", ["scripts/qa/test_world_v1_runtime.js", WORLD]],
   ["Experience signature", ["scripts/qa/qa_experiencia_mundo.js", SEED, WORLD]],
   ["Mobile layout", ["scripts/qa/qa_mobile_final_layout.js"]],
+  ["Hosted demo package", ["scripts/qa/qa_static_demo.js"]],
   ["Visual manifest", ["scripts/qa/qa_visual_manifest.js", WORLD_ID]],
   ["Visual coverage", ["scripts/qa/qa_visual_coverage.js", WORLD_ID]],
   ["HTTP guided routes", ["scripts/qa/smoke_world_http.js", WORLD]],

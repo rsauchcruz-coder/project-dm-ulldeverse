@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17110d">
+  <title>Project DM · ULLDE:VERSE</title>
+  <link rel="stylesheet" href="/prototip_v22.css?v=20260716m">
+  <link rel="stylesheet" href="/prototip_ui.css?v=20260716m">
+  <link rel="stylesheet" href="/prototipo-dossier-premium.css?v=20260717visual1">
+</head>
+<body class="theme-Aventura" data-ui="dossier-premium">
+  <svg class="ink-filter-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="dp-rough-ink" x="-3%" y="-4%" width="106%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="2" seed="17" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="0.34" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="uv-remove-white" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" result="logo-keyed" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        -1.15 -1.15 -1.15 0 3.35"/>
+      <feComposite in="logo-keyed" in2="SourceAlpha" operator="in"/>
+    </filter>
+  </svg>
+  <div class="app">
+    <section id="homeScreen" class="screen active" aria-live="polite">
+      <div class="home-card">
+        <img class="ulldeverse-logo ulldeverse-logo-home" src="/ui/ulldeverse/ulldeverse-logo-official.png" alt="ULLDE:VERSE">
+        <h1 class="library-title">El testigo de Ulldecona</h1>
+        <p class="subtitle">Una aventura de ULLDE:VERSE, construida y verificada con la fábrica narrativa Project DM.</p>
+
+        <label for="genere">Género</label>
+        <select id="genere">
+          <option value="Aventura" selected>Aventura</option>
+        </select>
+        <label for="worldSelect">Mundo</label>
+        <select id="worldSelect"><option value="">Cargando mundos…</option></select>
+        <div id="worldInfo" class="small-note"></div>
+        <label for="mode">Modo</label>
+        <select id="mode"><option value="CURT GUIAT">Corto guiado · funciona sin API</option><option value="LLIURE">Libre asistido · experimental</option></select>
+        <button id="startBtn" class="start-btn" type="button">Jugar este mundo</button>
+        <button id="loadHomeBtn" class="start-btn secondary" type="button">Cargar guardado manual</button>
+        <button id="loadEmergencyHomeBtn" class="start-btn secondary" type="button">Cargar autoguardado de emergencia</button>
+        <div id="homeError" class="error"></div>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <button id="drawerHandle" class="drawer-handle" type="button" aria-label="Abrir expediente lateral">
+        <span aria-hidden="true">‹</span>
+      </button>
+
+      <aside id="sideDrawer" class="side-drawer" aria-hidden="true">
+        <div class="drawer-head">
+          <strong>Expediente</strong>
+          <button id="closeDrawer" type="button" aria-label="Cerrar expediente">×</button>
+        </div>
+        <nav class="side-tabs" aria-label="Consultas del expediente">
+          <button data-panel="interactuable" aria-label="Entorno" type="button"><span class="tab-icon" aria-hidden="true">⌂</span><span>Entorno</span></button>
+          <button data-panel="inventario" aria-label="Inventario" type="button"><span class="tab-icon" aria-hidden="true">▣</span><span>Inventario</span></button>
+          <button data-panel="deducciones" aria-label="Deducciones" type="button"><span class="tab-icon" aria-hidden="true">⌕</span><span>Deducciones</span></button>
+          <button data-panel="peligros" aria-label="Peligros" type="button"><span class="tab-icon" aria-hidden="true">△</span><span>Peligros</span></button>
+          <button data-panel="objetivo" aria-label="Objetivo" type="button"><span class="tab-icon" aria-hidden="true">◎</span><span>Objetivo</span></button>
+          <button data-panel="personajes" aria-label="Personajes" type="button"><span class="tab-icon" aria-hidden="true">♟</span><span>Personajes</span></button>
+          <button data-panel="cuaderno" aria-label="Cuaderno" type="button"><span class="tab-icon" aria-hidden="true">▤</span><span>Cuaderno</span></button>
+        </nav>
+        <div class="drawer-system">
+          <button id="saveBtn" type="button">Guardar</button>
+          <button id="loadBtn" type="button">Cargar</button>
+          <button id="textBtn" type="button">Cambiar texto</button>
+          <button id="exportTextBtn" type="button">Exportar mejoras</button>
+          <button id="restartBtn" type="button">Reiniciar aventura</button>
+          <button id="exitBtn" type="button">Volver a la biblioteca</button>
+        </div>
+      </aside>
+      <div id="drawerShade" class="drawer-shade"></div>
+
+      <main class="dossier-shell">
+        <article class="artifact">
+          <section class="paper">
+            <header class="header">
+              <div class="brandrow">
+                <span class="ulldeverse-logo-crop">
+                  <img class="ulldeverse-logo ulldeverse-logo-header" src="/ui/ulldeverse/ulldeverse-logo-official.png" alt="ULLDE:VERSE">
+                </span>
+                <span class="kind-wrap">
+                  <span id="dossierKind" class="kind">Expediente de campo</span>
+                </span>
+              </div>
+              <h1 id="worldTitle" class="world-title">Biblioteca de aventuras</h1>
+              <div id="location" class="location"></div>
+              <div class="statebar">
+                <div class="meter">
+                  <div class="metertop"><span id="pressureName">Presión</span><strong id="pressureLabel">0/8</strong></div>
+                  <div id="pressureDots" class="dots"></div>
+                </div>
+                <div class="meter">
+                  <div class="metertop"><span id="trustName">Confianza</span><strong id="trustLabel">Neutra</strong></div>
+                  <div id="trustDots" class="dots"></div>
+                </div>
+              </div>
+            </header>
+
+            <div class="situation-wrap"><p id="visibleSituation" class="situation"></p></div>
+
+            <section class="scene" aria-label="Escena y personajes presentes">
+              <div id="photoWrap" class="photo-wrap">
+                <img id="sceneImage" alt="" role="button" tabindex="0" aria-label="Ampliar escena">
+                <div id="photoPlaceholder" class="photo-placeholder"></div>
+                <div id="focusHint" class="focus-hint">Toca los puntos de la escena para examinarlos.</div>
+                <button class="hotspot" data-hotspot="0" type="button">1</button>
+                <button class="hotspot" data-hotspot="1" type="button">2</button>
+                <button class="hotspot" data-hotspot="2" type="button">3</button>
+              </div>
+              <div id="characters" class="characters"></div>
+            </section>
+
+            <section class="content">
+              <button id="routeCard" class="section-card route-card" type="button">
+                <span class="section-title">Ruta de la investigación</span>
+                <span id="route" class="route"></span>
+              </button>
+
+              <div id="archiveAnchor" class="archive">
+                <div class="archive-label">Hojas del expediente</div>
+                <div id="archiveTabs" class="archive-tabs" role="tablist"></div>
+              </div>
+
+              <section id="narrativeCard" class="section-card narrative">
+                <div class="section-title">
+                  <span id="narrativeTitle">Narración</span>
+                  <button id="modeToggle" class="mode-toggle" type="button">Texto seguido</button>
+                </div>
+                <div id="story" class="story"></div>
+                <div class="page-nav">
+                  <button id="prevPage" type="button" aria-label="Fragmento anterior">‹</button>
+                  <div><div id="pageStatus" class="page-status"></div><div id="pageProgress" class="progress"></div></div>
+                  <button id="nextPage" type="button" aria-label="Fragmento siguiente">›</button>
+                </div>
+              </section>
+
+              <section id="decisionCard" class="section-card decision-card">
+                <div class="section-title"><span>¿Qué quieres hacer?</span></div>
+                <div id="actionsList" class="decisions"></div>
+                <div id="detailCard" class="detail-card" hidden></div>
+                <div class="free-input"><textarea id="playerInput" placeholder="Escribe tu acción…"></textarea><button id="sendBtn" type="button">Enviar</button></div>
+              </section>
+              <section id="finalCard" class="final-card"></section>
+            </section>
+          </section>
+        </article>
+      </main>
+      <button id="jumpDecisions" class="jump-decisions" type="button">Ir a decisiones ↓</button>
+    </section>
+  </div>
+
+  <div id="sheetback" class="sheetback">
+    <section class="sheet">
+      <div class="sheethead"><div><small id="sheetKind"></small><h2 id="sheetTitle"></h2></div><button id="closeSheet" class="close" type="button">×</button></div>
+      <div id="sheetList" class="sheet-list"></div>
+    </section>
+  </div>
+
+  <div id="sceneViewer" class="scene-viewer" hidden aria-hidden="true">
+    <img id="sceneViewerImage" alt="" tabindex="-1">
+  </div>
+
+  <div id="cuadernoModal" class="modal-backdrop"><div class="modal-card"><div class="modal-header"><h2 class="modal-title">Cuaderno</h2><button id="closeCuadernoBtn" class="secondary" type="button">Cerrar</button></div><div id="cuadernoContent"></div></div></div>
+
+  <div id="mejoraModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header"><h2 class="modal-title">Cambiar texto</h2><button id="closeMejoraBtn" class="secondary" type="button">Cerrar</button></div>
+      <div class="modal-section"><div class="modal-section-title">Texto actual</div><div id="mejoraOriginal" class="mejora-original"></div></div>
+      <div class="modal-section"><div class="modal-section-title">Texto nuevo</div><textarea id="mejoraNuevo"></textarea></div>
+      <div class="modal-section">
+        <div class="modal-section-title">Tipo de problema</div>
+        <select id="mejoraTipo"><option value="explica_demasiado">Explica demasiado</option><option value="muy_generico">Muy genérico</option><option value="palabra_de_juego">Palabra de juego</option><option value="falta_contexto">Falta contexto</option><option value="accion_poco_clara">Acción poco clara</option><option value="no_es_fisico">No es físico</option><option value="otro">Otro</option></select>
+        <div id="mejoraTipoGuia" class="mejora-hint"></div><div id="mejoraAprendizaje" class="mejora-warning"></div>
+      </div>
+      <div class="modal-section"><div class="modal-section-title">Interpretación</div><div id="mejoraAnalisis" class="mejora-hint">Analizando…</div></div>
+      <div class="mejora-actions"><button id="saveMejoraBtn" type="button">Guardar mejora</button><button id="cancelMejoraBtn" class="secondary" type="button">Cancelar</button></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script>window.__PROJECT_DM_STATIC_DEMO__ = true;</script>
+  <script src="/static-demo-runtime.js?v=20260718c"></script>
+  <script src="/prototip_v22.js?v=20260716m"></script>
+  <script src="/prototip_v22_patch.js?v=20260717visual1"></script>
+  <script src="/prototip_ui_runtime.js?v=20260716m"></script>
+  <script src="/prototipo-dossier-premium.js?v=20260717a"></script>
+</body>
+</html>
