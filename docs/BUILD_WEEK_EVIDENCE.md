@@ -65,5 +65,8 @@ Only the primary Codex Session ID belongs in the required Devpost field. Screens
 | `43af5cb` | Browser-only public guided runtime and deployment QA |
 | `532b3b1` | Static production artifact |
 | `b4d448e` | Production Worker package |
+| `e7a2a18` | Final Build Week submission plan |
+| `8cdaf19` | Devpost copy, judge quickstart and public gallery package |
+| `42c5f90` | Public four-page evidence pack and reproducible PDF build |
 
 The public repository is deliberately smaller than the private workshop. Excluded material is not required to run, test or judge the submission.

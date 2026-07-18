@@ -1,6 +1,7 @@
 # Public release checklist
 
 Run this checklist from a fresh checkout before publishing the submission.
+Use `docs/SUBMISSION_CONTROL.md` as the single operational status document.
 
 ## Repository
 
@@ -37,3 +38,4 @@ Run this checklist from a fresh checkout before publishing the submission.
 - [ ] Add the primary `/feedback` Codex Session ID to Devpost.
 - [ ] Add the final YouTube URL and submission URL.
 - [ ] Tag the exact evaluated commit.
+- [ ] Save a screenshot of Devpost's successful submission confirmation.

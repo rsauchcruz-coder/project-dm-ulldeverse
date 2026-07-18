@@ -1,6 +1,11 @@
 # Devpost submission copy
 
-This document is ready to paste into Devpost. Replace only the marked YouTube and Session ID fields after they are available.
+This document is ready to paste into Devpost. Replace only the marked YouTube
+and Session ID fields after they are available. Operational status and the exact
+submission sequence live in `docs/SUBMISSION_CONTROL.md`.
+
+Official deadline: **21 July 2026 at 5:00 PM Pacific Time** (22 July at
+02:00 CEST in mainland Spain). Submit earlier whenever possible.
 
 ## Project overview
 
@@ -148,6 +153,11 @@ Project DM currently proves the factory with one finished world. The next steps 
 ### Fastest path
 
 Open https://project-dm-ulldeverse.rsauchcruz.chatgpt.site, keep **Corto guiado** selected and choose **Jugar este mundo**. No login or API key is required.
+
+The playable historical fiction is intentionally in Spanish. An English
+translation of the interface, opening case, representative route and all ending
+outcomes is available at:
+https://github.com/rsauchcruz-coder/project-dm-ulldeverse/blob/main/docs/ENGLISH_PLAYTHROUGH_GUIDE.md
 
 For a visible state change, choose:
 

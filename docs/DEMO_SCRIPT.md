@@ -60,7 +60,10 @@ The official video must be public on YouTube, under three minutes, narrated in E
 
 ## Optional continuous mini-world proof
 
-This recording is supporting evidence, not the official submission video. Do it only after the official video and Devpost draft are safe.
+This recording is supporting evidence, not the official submission video. Do it
+only after the official video and Devpost draft are safe. The canonical,
+command-by-command plan and integrity rules now live in
+`docs/RECORDED_BUILD_PROTOCOL.md`; the summary below is retained for orientation.
 
 ### Scope
 

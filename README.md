@@ -79,15 +79,18 @@ The source trail for the submitted world is intentionally small:
 
 ## Documentation
 
+- [Submission control and remaining actions](docs/SUBMISSION_CONTROL.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [AI use and human control](docs/AI_USAGE.md)
 - [Build Week evidence](docs/BUILD_WEEK_EVIDENCE.md)
 - [Contest readiness and before/after scope](docs/CONTEST_READINESS.md)
 - [Judge quickstart](docs/JUDGES_QUICKSTART.md)
+- [English companion to the Spanish playable world](docs/ENGLISH_PLAYTHROUGH_GUIDE.md)
 - [Devpost submission copy](docs/DEVPOST_SUBMISSION.md)
 - [Public evidence pack](output/pdf/project-dm-build-week-evidence.pdf)
 - [Visual assets and provenance](docs/ASSETS.md)
 - [Video and recorded-build plan](docs/DEMO_SCRIPT.md)
+- [Continuous mini-world build protocol](docs/RECORDED_BUILD_PROTOCOL.md)
 - [Public release checklist](docs/RELEASE_CHECKLIST.md)
 - [Security and private configuration](SECURITY.md)
 

@@ -1,5 +1,9 @@
 # Judge quickstart
 
+The playable historical fiction is intentionally in Spanish. Judges who prefer
+English can follow the exact translated route in
+[`docs/ENGLISH_PLAYTHROUGH_GUIDE.md`](ENGLISH_PLAYTHROUGH_GUIDE.md).
+
 Project DM can be evaluated in under two minutes without installing anything.
 
 ## 90-second public path
