@@ -6,7 +6,7 @@ const express = require("express");
 const dm = require("./jocgroq16.js");
 const { enrichResponse } = require("./lib/ui_case_state.js");
 
-const UI_VERSION = "20260718contest1";
+const UI_VERSION = "20260718contest2";
 const CHARACTER_PORTRAIT_STYLE = `
 <style id="dp-character-portrait-size">
 @media (max-width: 430px) {

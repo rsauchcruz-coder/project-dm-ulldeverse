@@ -1177,7 +1177,9 @@ body[data-ui="dossier-premium"] .home-card {
 }
 
 body[data-ui="dossier-premium"] .home-card .library-title {
-  margin: -3% 0 8px;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 8px;
   color: #241c15;
   font: 700 clamp(1.55rem, 6vw, 2.25rem)/1.08 var(--dp-display);
   text-align: center;
@@ -1209,7 +1211,7 @@ body[data-ui="dossier-premium"] .ulldeverse-logo {
 
 body[data-ui="dossier-premium"] .ulldeverse-logo-home {
   width: min(100%, 390px);
-  margin: clamp(-32px, -5vw, -12px) auto 0;
+  margin: clamp(-32px, -5vw, -12px) auto clamp(8px, 2vw, 18px);
 }
 
 body[data-ui="dossier-premium"] .ulldeverse-logo-crop {
@@ -1262,6 +1264,28 @@ body[data-ui="dossier-premium"] .kind-wrap {
 
 body[data-ui="dossier-premium"] .choice small {
   display: none !important;
+}
+
+body[data-ui="dossier-premium"] .choice.is-selected {
+  border-color: #4f261f;
+  background:
+    linear-gradient(90deg, #6e3328 0 8px, transparent 8px),
+    linear-gradient(105deg, #f4e4c3, #ddc18f);
+  box-shadow:
+    0 0 0 2px #7a3a2e,
+    3px 6px 9px #33201252,
+    inset 0 1px #fff7e3;
+}
+
+body[data-ui="dossier-premium"] .choice.is-selected::before {
+  background: #6e3328;
+  box-shadow: 0 0 0 4px #f0dab0, 0 0 0 5px #6e3328;
+}
+
+body[data-ui="dossier-premium"] .choice.is-selected::after {
+  content: "✓";
+  color: #5b2b23;
+  font-size: 1rem;
 }
 
 body[data-ui="dossier-premium"] .detail-card {

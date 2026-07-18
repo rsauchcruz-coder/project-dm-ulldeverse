@@ -16,11 +16,12 @@
       <feDisplacementMap in="SourceGraphic" in2="grain" scale="0.34" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="uv-remove-white" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB">
-      <feColorMatrix type="matrix" values="
+      <feColorMatrix type="matrix" result="logo-keyed" values="
         1 0 0 0 0
         0 1 0 0 0
         0 0 1 0 0
         -1.15 -1.15 -1.15 0 3.35"/>
+      <feComposite in="logo-keyed" in2="SourceAlpha" operator="in"/>
     </filter>
   </svg>
   <div class="app">

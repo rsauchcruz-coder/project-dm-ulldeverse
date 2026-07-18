@@ -193,12 +193,34 @@
   }
 
   function installDecisionFlow() {
+    function clearSelectedChoice() {
+      document.querySelectorAll("#actionsList .choice").forEach(function (choice) {
+        choice.classList.remove("is-selected");
+        choice.setAttribute("aria-pressed", "false");
+      });
+    }
+
+    function markSelectedChoice(action) {
+      clearSelectedChoice();
+      const choices = Array.from(document.querySelectorAll("#actionsList .choice"));
+      const focused = document.activeElement && document.activeElement.matches("#actionsList .choice")
+        ? document.activeElement
+        : null;
+      const selected = focused || choices.find(function (choice) {
+        return choice.querySelector("strong")?.textContent.trim() === String(action?.text || "").trim();
+      });
+      if (!selected) return;
+      selected.classList.add("is-selected");
+      selected.setAttribute("aria-pressed", "true");
+    }
+
     if (typeof renderChoices === "function") {
       const renderChoicesBeforeCompetition = renderChoices;
       renderChoices = function competitionRenderChoices() {
         const result = renderChoicesBeforeCompetition();
-        document.querySelectorAll("#actionsList .choice small").forEach(function (metadata) {
-          metadata.remove();
+        document.querySelectorAll("#actionsList .choice").forEach(function (choice) {
+          choice.setAttribute("aria-pressed", "false");
+          choice.querySelector("small")?.remove();
         });
         return result;
       };
@@ -207,6 +229,7 @@
     if (typeof selectAction === "function") {
       selectAction = function competitionSelectAction(action) {
         const detail = byId("detailCard");
+        markSelectedChoice(action);
         detail.hidden = false;
         detail.innerHTML = '<div class="detail-actions"><button id="execAction" type="button">Ejecutar</button><button id="cancelAction" type="button">Cancelar</button></div>';
         byId("execAction").onclick = function () {
@@ -217,6 +240,7 @@
         byId("cancelAction").onclick = function () {
           detail.hidden = true;
           detail.innerHTML = "";
+          clearSelectedChoice();
         };
         detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
       };
