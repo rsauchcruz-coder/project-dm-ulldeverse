@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server_ui.js",
     "test": "npm run qa:submission",
+    "qa:repo": "node scripts/qa/qa_repository_hygiene.js",
     "qa:submission": "node scripts/qa/qa_submission.js",
     "qa:world": "node scripts/qa/qa_world.js worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
     "qa:agency": "node scripts/qa/preflight_agencia.js --profile=aventura_corta_reactiva worlds/Aventura/aventura_el_testigo_de_ulldecona.json",

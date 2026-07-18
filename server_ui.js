@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
-const dm = require("./jocgroq16.js");
+const dm = require("./narrative_engine.js");
 const { enrichResponse } = require("./lib/ui_case_state.js");
 
 const UI_VERSION = "20260718contest2";
@@ -78,7 +78,7 @@ express.response.sendFile = function patchedSendFile(filePath, options, callback
       html = html.replace("</head>", `${CHARACTER_PORTRAIT_STYLE}\n</head>`);
       this.set("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
       this.set("Pragma", "no-cache");
-      this.set("X-Projecte-DM-UI", UI_VERSION);
+      this.set("X-Project-DM-UI", UI_VERSION);
       return this.type("html").send(html);
     } catch (error) {
       console.error("[UI_INDEX]", error?.message || error);

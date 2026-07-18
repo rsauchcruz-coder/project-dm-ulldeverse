@@ -72,10 +72,10 @@
   "language_visible": "Castellano",
   "schema_version": "visual_style_contract_v1",
   "source_world": "worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
-  "status": "draft",
+  "status": "approved",
   "validation": {
-    "approved_at": null,
-    "approved_by": null,
+    "approved_at": "2026-07-18",
+    "approved_by": "Project DM human review",
     "required_before_approval": [
       "localizacion_calabozo",
       "referencia_albert",

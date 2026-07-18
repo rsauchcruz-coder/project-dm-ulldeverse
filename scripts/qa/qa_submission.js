@@ -9,6 +9,7 @@ const SEED = "fabrica/semillas/el_testigo_de_ulldecona_semilla_v1_2.json";
 const WORLD_ID = "aventura_el_testigo_de_ulldecona_001";
 
 const checks = [
+  ["Repository hygiene", ["scripts/qa/qa_repository_hygiene.js"]],
   ["World schema and narrative", ["scripts/qa/qa_world.js", WORLD]],
   ["Agency and reachable endings", ["scripts/qa/preflight_agencia.js", "--profile=aventura_corta_reactiva", WORLD]],
   ["Resource economy", ["scripts/qa/qa_economia_recursos.js", "--mode=gate", WORLD]],

@@ -35,7 +35,7 @@ server_ui.js
   ├── enriches the case-state response
   └── delegates to server.js
           ↓
-jocgroq16.js
+narrative_engine.js
   ├── loads the compiled world
   ├── applies guided transitions
   ├── persists local runtime state

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jocrol.local/schemas/semilla_mundo_v1.schema.json",
+  "$id": "https://project-dm.local/schemas/semilla_mundo_v1.schema.json",
   "title": "Semilla de mundo v1.1",
   "type": "object",
   "additionalProperties": false,

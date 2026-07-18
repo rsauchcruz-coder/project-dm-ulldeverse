@@ -12,7 +12,8 @@ Requirements:
 - No API key for the default guided experience.
 
 ```bash
-npm install
+npm ci
+npm test
 npm start
 ```
 
@@ -78,6 +79,8 @@ The source trail for the submitted world is intentionally small:
 - [Build Week evidence](docs/BUILD_WEEK_EVIDENCE.md)
 - [Visual assets and provenance](docs/ASSETS.md)
 - [Video and recorded-build plan](docs/DEMO_SCRIPT.md)
+- [Public release checklist](docs/RELEASE_CHECKLIST.md)
+- [Security and private configuration](SECURITY.md)
 
 ## Privacy and repository scope
 

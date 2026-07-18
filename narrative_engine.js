@@ -6,8 +6,7 @@ const guidedState = require("./lib/guided_state");
 const { adaptWorldV1, isWorldV1 } = require("./lib/world_v1_adapter");
 
 // =====================================================================
-// ROL MASTER - jocgroq_oracles.js
-// Project DM - Motor de MONS VIUS amb dm_oracles
+// Project DM narrative engine
 //
 // Principis:
 // - El món NO és un scene_graph rígid.
@@ -141,7 +140,7 @@ function dataFile(nom) {
 // Cada línia és un esdeveniment independent: facilita depurar partides,
 // errors de model, JSON invàlid, fallbacks i evolució de l'estat.
 const LOGS_MOTOR_FILE = "logs_motor.jsonl";
-const LOG_PROMPTS_COMPLETS = String(process.env.LOG_PROMPTS_COMPLETS || CONFIG.LOG_PROMPTS_COMPLETS || "true") === "true";
+const LOG_PROMPTS_COMPLETS = String(process.env.LOG_PROMPTS_COMPLETS || CONFIG.LOG_PROMPTS_COMPLETS || "false") === "true";
 const LOG_MAX_TEXT = parseInt(process.env.LOG_MAX_TEXT || CONFIG.LOG_MAX_TEXT || "12000", 10);
 
 function prepararPerLog(valor, profunditat = 0) {
@@ -521,14 +520,15 @@ async function cridarGeminiJSONModel(model, messages, etiqueta, maxTokens) {
 async function cridarOpenRouterJSONModel(model, messages, etiqueta, maxTokens) {
   if (!OPENROUTER_API_KEYS.length) throw new Error("No hay claves OpenRouter configuradas");
   return provarAmbClaus(OPENROUTER_API_KEYS, etiqueta, async (apiKey, idx) => {
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+      "X-Title": "ULLDE:VERSE / Project DM"
+    };
+    if (process.env.OPENROUTER_SITE_URL) headers["HTTP-Referer"] = process.env.OPENROUTER_SITE_URL;
     const res = await ambReintents(() => fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${apiKey}`,
-        "HTTP-Referer": process.env.OPENROUTER_SITE_URL || "https://projecte-dm.onrender.com",
-        "X-Title": "Project DM"
-      },
+      headers,
       body: JSON.stringify({ model, messages, temperature: 0.55, max_tokens: maxTokens })
     }), `${etiqueta}/openrouter-key-${idx + 1}`);
     if (!res.ok) {
@@ -2273,9 +2273,9 @@ function forcarMonPerId(id) {
 // 8. MOTOR PRINCIPAL
 // =====================================================================
 async function iniciarJoc() {
-  logEvent("CLI_START", { script: "jocgroq16.js" });
+  logEvent("CLI_START", { script: "narrative_engine.js" });
   console.log("\n=======================================================");
-  console.log("   ROL MASTER - jocgroq16.js");
+  console.log("   PROJECT DM - NARRATIVE ENGINE");
   console.log("=======================================================\n");
   console.log(`[Sistema] Router DM: Groq base=${MODEL_GROQ_BASE} | Groq barat=${MODEL_GROQ_CHEAP} | Gemini qualitat=${MODEL_GEMINI_QUALITY} | Gemini suport=${MODEL_GEMINI_SUPPORT} | OpenRouter=${MODEL_OPENROUTER_FREE}`);
   console.log(`[Sistema] Max tokens de SORTIDA torn: ${MAX_TOKENS_TORN} | final: ${MAX_TOKENS_FINAL}`);
