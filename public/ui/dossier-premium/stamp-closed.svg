@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210">
+  <defs>
+    <filter id="rough" x="-10%" y="-20%" width="120%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="3" seed="12" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+    </filter>
+  </defs>
+  <g transform="rotate(-7 180 105)" fill="none" stroke="#7b3029" filter="url(#rough)">
+    <rect x="18" y="18" width="324" height="174" rx="14" stroke-width="10"/>
+    <rect x="34" y="34" width="292" height="142" rx="7" stroke-width="3"/>
+    <path d="M48 101h264" stroke-width="3" stroke-dasharray="7 8"/>
+    <text x="180" y="88" text-anchor="middle" fill="#7b3029" stroke="none" font-family="Courier New,monospace" font-size="39" font-weight="700" letter-spacing="3">EXPEDIENTE</text>
+    <text x="180" y="148" text-anchor="middle" fill="#7b3029" stroke="none" font-family="Courier New,monospace" font-size="48" font-weight="700" letter-spacing="5">CERRADO</text>
+  </g>
+</svg>

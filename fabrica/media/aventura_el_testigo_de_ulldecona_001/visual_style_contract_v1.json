@@ -1,0 +1,90 @@
+{
+  "composition": {
+    "interface_space": "Permitir zonas de menor densidad para focos de consulta sin fabricar carteles ni UI dentro de la imagen",
+    "preferred_orientation": "vertical",
+    "readability": [
+      "Siluetas claras a tamano pequeno",
+      "Objeto de conflicto localizable sin convertirse en icono flotante",
+      "No depender de detalles microscopicos para entender la escena",
+      "No incluir texto generado dentro de la imagen"
+    ],
+    "safe_crop": "Mantener rostros, objeto causal y acceso principal dentro del area central",
+    "target": "Smartphone-first"
+  },
+  "continuity": {
+    "characters": {
+      "jugador": "Usar la diseño ficticio aprobado de Arnau Cervera cuando exista. No fijar rasgos nuevos solo desde el prompt maestro.",
+      "other_characters": "Crear primero una ficha de referencia antes de repetir un PNJ en varias escenas.",
+      "pnj:albert": "Usar la diseño ficticio aprobado de Mateu Rius. Mantener constitucion, rostro, ropa de trabajo, herida y estado de custodia segun la escena.",
+      "pnj:sibila": "No producir en serie hasta aprobar una referencia maestra coherente con su papel, trabajo y familia."
+    },
+    "locations": {
+      "calabozo_castillo": "Arquitectura funcional de custodia dentro de un castillo en desmontaje parcial; cadena, mesa de escribano, puerta baja y escalera son elementos materiales, no decoracion generica.",
+      "casas_viejas": "Viviendas en desmontaje activo con vigas numeradas, piedra reservada, cuerda de apeo y rutas de salida hacia olivares.",
+      "cisterna": "Espacio de investigacion fisica con tapa, humedad, cierre alterado y accesos coherentes con el castillo."
+    },
+    "objects": {
+      "recurso:inv_eslabon_repuesto": "Eslabon o remache sustituido visible por contraste con el oxido antiguo; no debe parecer una cadena completamente nueva.",
+      "recurso:inv_fragmento_sello_registro": "Fragmento material pequeno y manipulable; debe conservar forma y desgaste entre ficha y escenas."
+    },
+    "world_rules": [
+      "La politica se expresa mediante casas, agua, reparto, guardias, documentos y desplazamiento material",
+      "No convertir el mundo en fantasia epica ni en reconstruccion monumental idealizada",
+      "El traslado entre castillo y valle debe percibirse como trabajo en curso, no como ruina abandonada sin habitantes",
+      "Las pruebas conservan forma, desgaste y escala entre escenas",
+      "Los cambios de vestuario, heridas, custodia y objetos requieren causa declarada por el mundo"
+    ]
+  },
+  "direction": {
+    "camera_language": "Encuadres cercanos o medios para decisiones humanas; planos mas abiertos solo para orientar localizacion y rutas",
+    "detail_level": "Semirrealista, fisico y legible; detalle concentrado en objetos causales, rostros y accesos",
+    "genre_tone": "Aventura historica de persecucion, investigacion material, autoridad local y confianza incomoda",
+    "lighting": "Fuentes plausibles: lamparas de aceite, amanecer, luz exterior filtrada y sombras de arquitectura utilitaria",
+    "material_language": [
+      "piedra irregular",
+      "madera de obra y desmontaje",
+      "hierro usado",
+      "polvo y cal",
+      "cuerda",
+      "tablillas",
+      "pergamino y sellos"
+    ],
+    "medium": "Ilustracion narrativa semirrealista con presencia material y acabado de expediente historico",
+    "palette_language": "Tonos terrosos, cal, piedra, madera oscura y luz calida limitada; contraste suficiente para lectura movil",
+    "period": "Ulldecona medieval durante el traslado progresivo desde el castillo viejo hacia el asentamiento de Sant Lluc"
+  },
+  "forbidden": [
+    "fantasia epica",
+    "armaduras ceremoniales o renacentistas",
+    "castillo palaciego limpio o monumental",
+    "pueblos deshabitados sin actividad de traslado",
+    "objetos modernos",
+    "electricidad",
+    "texto incrustado",
+    "marcas de agua",
+    "UI falsa",
+    "Bernat visible en escenas donde no esta presente",
+    "cadaver de Guillem cuando el nodo no lo muestra",
+    "sello completo antes de que la ruta lo autorice",
+    "pistas futuras convertidas en hechos visuales",
+    "violencia, heridas o deterioros no declarados"
+  ],
+  "language_visible": "Castellano",
+  "schema_version": "visual_style_contract_v1",
+  "source_world": "worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+  "status": "draft",
+  "validation": {
+    "approved_at": null,
+    "approved_by": null,
+    "required_before_approval": [
+      "localizacion_calabozo",
+      "referencia_albert",
+      "prop_cadena_reparada",
+      "escena_calabozo_compuesta",
+      "lectura_movil",
+      "revision_anti_spoiler"
+    ]
+  },
+  "version": 1,
+  "world_id": "aventura_el_testigo_de_ulldecona_001"
+}

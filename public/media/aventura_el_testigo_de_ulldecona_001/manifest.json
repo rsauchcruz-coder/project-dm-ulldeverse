@@ -1,0 +1,487 @@
+{
+  "assets": {
+    "char_albert": {
+      "alt": "Mateu Rius, cantero acusado y testigo incomodo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/mateu.webp",
+      "type": "character"
+    },
+    "char_bernat": {
+      "alt": "Bernat Llorca, encargado del traslado y autoridad local",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/bernat.webp",
+      "type": "character"
+    },
+    "char_fray_pere": {
+      "alt": "Fray Pere de Cardona, autoridad de la encomienda que recibe testimonios",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/fray_pere.webp",
+      "type": "character"
+    },
+    "char_guillem": {
+      "alt": "Guillem Miró, oficial del reparto cuyo destino desencadena la investigaci?n",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/guillem.webp",
+      "type": "character"
+    },
+    "char_miquel": {
+      "alt": "Miquel Sabater, auxiliar del registro y testigo ambiguo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/miquel.webp",
+      "type": "character"
+    },
+    "char_ramon": {
+      "alt": "Arnau Cervera, escribano auxiliar y custodio improvisado",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/arnau.webp",
+      "type": "character"
+    },
+    "char_sibila": {
+      "alt": "Sibila Ferré, hermana de Mateu y trabajadora de las casas en desmontaje",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/characters/sibila.webp",
+      "type": "character"
+    },
+    "prop_cadena_reparada": {
+      "alt": "Cadena oxidada con un remache sustituido y aceite oscuro",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/props/cadena_reparada.webp",
+      "type": "prop"
+    },
+    "prop_cuerda_apeo_marcada": {
+      "alt": "Cuerda de apeo de c??amo con nudos de medida desplazados y dos marcas de hilo rojo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/props/cuerda_apeo_marcada.webp",
+      "type": "prop"
+    },
+    "prop_fragmento_sello": {
+      "alt": "Fragmento desgastado del sello del registro",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/props/fragmento_sello.webp",
+      "type": "prop"
+    },
+    "prop_tablilla_reparto": {
+      "alt": "Tablilla de madera desgastada con marcas de reparto no legibles",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/props/tablilla_reparto.webp",
+      "type": "prop"
+    },
+    "scene_acequia_corrales": {
+      "alt": "Acequia detr?s de corrales nuevos con bolsa de documentos y dos salidas estrechas",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/acequia_corrales.webp",
+      "type": "scene"
+    },
+    "scene_barranco_olivares": {
+      "alt": "Barranco bajo olivares con muro de piedra seca, calera abandonada y paso de canteros",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/barranco_olivares.webp",
+      "type": "scene"
+    },
+    "scene_calabozo_apertura": {
+      "alt": "Calabozo de piedra del castillo de Ulldecona con puerta baja, escalera al patio, lampara de guardia y cadena en el suelo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/calabozo_apertura_r2.webp",
+      "type": "scene"
+    },
+    "scene_camino_valencia": {
+      "alt": "Camino de Valencia con control an?nimo de guardia, carros de piedra, tablillas y acequia lateral",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/camino_valencia.webp",
+      "type": "scene"
+    },
+    "scene_casas_viejas_sibila": {
+      "alt": "Casas viejas en desmontaje con cuerda de apeo marcada, piedra reservada, vigas y salida hacia los olivares",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/casas_viejas_sibila.webp",
+      "type": "scene"
+    },
+    "scene_cisterna_investigacion": {
+      "alt": "Corredor vac?o de la cisterna con tapa cerrada, cierre aceitado, fragmento de sello y canal de desag?e",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/cisterna_investigacion.webp",
+      "type": "scene"
+    },
+    "scene_collado_godall": {
+      "alt": "Collado de Godall al amanecer con bifurcaci?n, castillo oscuro y luces lejanas de Sant Lluc",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/collado_godall.webp",
+      "type": "scene"
+    },
+    "scene_corral_exterior": {
+      "alt": "Corral exterior de Sant Lluc con pesebre, bolsa sellada y dos salidas desiguales",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/corral_exterior.webp",
+      "type": "scene"
+    },
+    "scene_corral_sello_mostrado": {
+      "alt": "Corral de Sant Lluc con fragmento de sello expuesto junto a una l?mpara y salida a Godall abierta",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/corral_sello_mostrado.webp",
+      "type": "scene_variant"
+    },
+    "scene_corral_tablilla_entregada": {
+      "alt": "Corral de Sant Lluc con bolsa abultada por la tablilla, salida a Godall abierta y regreso bloqueado",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/corral_tablilla_entregada.webp",
+      "type": "scene_variant"
+    },
+    "scene_desague_cisterna": {
+      "alt": "Canal de desag?e bajo la muralla con reja exterior, rastro de brea y losa m?vil",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/desague_cisterna.webp",
+      "type": "scene"
+    },
+    "scene_final_albert_bajo_juicio": {
+      "alt": "Camino bajo Sant Lluc con nueva escolta anonima, acta y cadena separadas de los hombres de Bernat",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_mateu_bajo_juicio.webp",
+      "type": "scene"
+    },
+    "scene_final_albert_recapturado": {
+      "alt": "Puerta baja del castillo al amanecer con cadena reparada tras borrar la prueba y guardia anonimo al fondo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_mateu_recapturado.webp",
+      "type": "scene"
+    },
+    "scene_final_bernat_impone_version": {
+      "alt": "Pozo de Sant Lluc con estacas ya clavadas, acta cerrada y familias anonimas apartadas",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_bernat_impone_version.webp",
+      "type": "scene"
+    },
+    "scene_final_limite_sant_lluc": {
+      "alt": "Limite de Sant Lluc al amanecer con carros detenidos, guardias anonimos indecisos y camino abierto",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_limite_sant_lluc.webp",
+      "type": "scene"
+    },
+    "scene_final_regreso_testimonio": {
+      "alt": "Camino de regreso a Sant Lluc de noche con pozo iluminado, audiencia anonima y castillo al fondo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_regreso_testimonio.webp",
+      "type": "scene"
+    },
+    "scene_final_reparto_reabierto": {
+      "alt": "Pozo de Sant Lluc con estacas retiradas y apiladas, terreno abierto y familias anonimas",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_reparto_reabierto.webp",
+      "type": "scene"
+    },
+    "scene_final_verdad_entera": {
+      "alt": "Plaza de Sant Lluc con mesa de audiencia, pruebas separadas, estacas retiradas y familias anonimas",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/final_verdad_entera.webp",
+      "type": "scene"
+    },
+    "scene_hondonada_castillo": {
+      "alt": "Hondonada exterior de la cisterna con cu?a breada, herramientas lavadas y canal de desag?e",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/hondonada_castillo.webp",
+      "type": "scene"
+    },
+    "scene_noche_godall": {
+      "alt": "Senda nocturna de Godall con bifurcaci?n, abrigo de roca, collado y luces lejanas de Sant Lluc",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/noche_godall.webp",
+      "type": "scene"
+    },
+    "scene_plaza_sant_lluc": {
+      "alt": "Plaza provisional de Sant Lluc con mesa de audiencia vac?a, familias an?nimas, pozo y guardias al fondo",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/plaza_sant_lluc.webp",
+      "type": "scene"
+    },
+    "scene_plaza_sant_lluc_cerco_encima": {
+      "alt": "Plaza de Sant Lluc con mesa de audiencia sostenida por vecinos y guardias an?nimos alcanzando el cerco",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/plaza_sant_lluc_cerco_encima.webp",
+      "type": "scene_variant"
+    },
+    "scene_pozo_sant_lluc": {
+      "alt": "Pozo nuevo de Sant Lluc con mesa de reparto, estacas, carros y familias an?nimas",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/pozo_sant_lluc.webp",
+      "type": "scene"
+    },
+    "scene_pozo_sant_lluc_carreteros_alertados": {
+      "alt": "Pozo de Sant Lluc con carreteros alertados, mulas embarradas y ropa mojada junto a la mesa de reparto",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/pozo_sant_lluc_carreteros_alertados.webp",
+      "type": "scene_variant"
+    },
+    "scene_puerta_baja_castillo": {
+      "alt": "Puerta baja del castillo con cadena reparada, tablilla provisional y camino abierto",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/puerta_baja_castillo.webp",
+      "type": "scene"
+    },
+    "scene_refugio_canteros": {
+      "alt": "Refugio vac?o de canteros con banco de piedra, tinaja, croquis de carb?n y salidas hacia corrales y Godall",
+      "src": "/media/aventura_el_testigo_de_ulldecona_001/scenes/refugio_canteros.webp",
+      "type": "scene"
+    }
+  },
+  "bindings": {
+    "entities": {
+      "jugador": {
+        "character_asset": "char_ramon"
+      },
+      "pnj:albert": {
+        "character_asset": "char_albert"
+      },
+      "pnj:bernat": {
+        "character_asset": "char_bernat"
+      },
+      "pnj:fray_pere": {
+        "character_asset": "char_fray_pere"
+      },
+      "pnj:guillem": {
+        "character_asset": "char_guillem"
+      },
+      "pnj:miquel": {
+        "character_asset": "char_miquel"
+      },
+      "pnj:sibila": {
+        "character_asset": "char_sibila"
+      },
+      "recurso:inv_cuerda_apeo_marcada": {
+        "prop_asset": "prop_cuerda_apeo_marcada"
+      },
+      "recurso:inv_eslabon_repuesto": {
+        "prop_asset": "prop_cadena_reparada"
+      },
+      "recurso:inv_fragmento_sello_registro": {
+        "prop_asset": "prop_fragmento_sello"
+      },
+      "recurso:inv_tablilla_reparto": {
+        "prop_asset": "prop_tablilla_reparto"
+      }
+    },
+    "nodes": {
+      "f01_albert_recapturado": {
+        "scene_asset": "scene_final_albert_recapturado"
+      },
+      "f02_bernat_impone_version": {
+        "scene_asset": "scene_final_bernat_impone_version"
+      },
+      "f03_verdad_entera": {
+        "scene_asset": "scene_final_verdad_entera"
+      },
+      "f04_reparto_reabierto": {
+        "scene_asset": "scene_final_reparto_reabierto"
+      },
+      "f05_albert_bajo_juicio": {
+        "scene_asset": "scene_final_albert_bajo_juicio"
+      },
+      "f06_albert_fuera_del_cerco": {
+        "scene_asset": "scene_final_limite_sant_lluc"
+      },
+      "f07_pacto_bajo_sello": {
+        "scene_asset": "scene_corral_exterior"
+      },
+      "f08_camino_godall": {
+        "scene_asset": "scene_collado_godall"
+      },
+      "f09_regreso_con_testimonio": {
+        "scene_asset": "scene_final_regreso_testimonio"
+      },
+      "n01_calabozo_decision": {
+        "scene_asset": "scene_calabozo_apertura"
+      },
+      "n02_custodia_aparente": {
+        "scene_asset": "scene_puerta_baja_castillo"
+      },
+      "n02_liberar_albert": {
+        "scene_asset": "scene_casas_viejas_sibila"
+      },
+      "n02_regreso_cisterna": {
+        "scene_asset": "scene_cisterna_investigacion"
+      },
+      "n03_barranco_olivares": {
+        "scene_asset": "scene_barranco_olivares"
+      },
+      "n03_camino_valencia": {
+        "scene_asset": "scene_camino_valencia"
+      },
+      "n03_desague_cisterna": {
+        "scene_asset": "scene_desague_cisterna"
+      },
+      "n04_encuentro_bernat": {
+        "scene_asset": "scene_acequia_corrales"
+      },
+      "n04_hondonada_castillo": {
+        "scene_asset": "scene_hondonada_castillo"
+      },
+      "n04_pozo_sant_lluc": {
+        "scene_asset": "scene_pozo_sant_lluc",
+        "scene_variants": [
+          {
+            "guard": {
+              "requires": [
+                "flag_carreteros_alertados"
+              ]
+            },
+            "scene_asset": "scene_pozo_sant_lluc_carreteros_alertados"
+          }
+        ]
+      },
+      "n04_refugio_canteros": {
+        "scene_asset": "scene_refugio_canteros"
+      },
+      "n05_corral_bernat": {
+        "scene_asset": "scene_corral_exterior",
+        "scene_variants": [
+          {
+            "guard": {
+              "forbids": [
+                "flag_corral_sello_mostrado"
+              ],
+              "requires": [
+                "flag_bernat_tiene_tablilla"
+              ]
+            },
+            "scene_asset": "scene_corral_tablilla_entregada"
+          },
+          {
+            "guard": {
+              "forbids": [
+                "flag_bernat_tiene_tablilla"
+              ],
+              "requires": [
+                "flag_corral_sello_mostrado"
+              ]
+            },
+            "scene_asset": "scene_corral_sello_mostrado"
+          }
+        ]
+      },
+      "n05_noche_godall": {
+        "scene_asset": "scene_noche_godall"
+      },
+      "n05_reparto_congregado": {
+        "scene_asset": "scene_plaza_sant_lluc",
+        "scene_variants": [
+          {
+            "guard": {
+              "requires": [
+                "presion>=6"
+              ]
+            },
+            "scene_asset": "scene_plaza_sant_lluc_cerco_encima"
+          }
+        ]
+      },
+      "n06_audiencia_fraude": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_audiencia_muerte": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_audiencia_testimonio": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_collado_final": {
+        "scene_asset": "scene_collado_godall"
+      },
+      "n06_pacto_bernat": {
+        "scene_asset": "scene_corral_exterior",
+        "scene_variants": [
+          {
+            "guard": {
+              "forbids": [
+                "flag_corral_sello_mostrado"
+              ],
+              "requires": [
+                "flag_bernat_tiene_tablilla"
+              ]
+            },
+            "scene_asset": "scene_corral_tablilla_entregada"
+          },
+          {
+            "guard": {
+              "forbids": [
+                "flag_bernat_tiene_tablilla"
+              ],
+              "requires": [
+                "flag_corral_sello_mostrado"
+              ]
+            },
+            "scene_asset": "scene_corral_sello_mostrado"
+          }
+        ]
+      }
+    }
+  },
+  "hotspots": {
+    "n01_calabozo_decision": {
+      "foco_cadena_reparada": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "n02_custodia_aparente": {
+      "foco_tablilla_provisional": {
+        "x": 0.38,
+        "y": 0.62
+      }
+    },
+    "n02_liberar_albert": {
+      "foco_cuerda_apeo": {
+        "x": 0.55,
+        "y": 0.65
+      }
+    },
+    "n02_regreso_cisterna": {
+      "foco_tapa_cisterna": {
+        "x": 0.37,
+        "y": 0.6
+      }
+    },
+    "n03_barranco_olivares": {
+      "foco_muro_seco": {
+        "x": 0.26,
+        "y": 0.47
+      }
+    },
+    "n03_camino_valencia": {
+      "foco_control_guardia": {
+        "x": 0.52,
+        "y": 0.44
+      }
+    },
+    "n03_desague_cisterna": {
+      "foco_reja_exterior": {
+        "x": 0.5,
+        "y": 0.34
+      }
+    },
+    "n04_encuentro_bernat": {
+      "foco_bolsa_documentos": {
+        "x": 0.3,
+        "y": 0.59
+      }
+    },
+    "n04_hondonada_castillo": {
+      "foco_cuna_cierre": {
+        "x": 0.46,
+        "y": 0.6
+      }
+    },
+    "n04_pozo_sant_lluc": {
+      "foco_mesa_reparto": {
+        "x": 0.31,
+        "y": 0.48
+      }
+    },
+    "n04_refugio_canteros": {
+      "foco_croquis_caminos": {
+        "x": 0.47,
+        "y": 0.34
+      }
+    },
+    "n05_corral_bernat": {
+      "foco_bolsa_sellada": {
+        "x": 0.31,
+        "y": 0.58
+      }
+    },
+    "n05_noche_godall": {
+      "foco_bifurcacion": {
+        "x": 0.39,
+        "y": 0.48
+      }
+    },
+    "n05_reparto_congregado": {
+      "foco_mesa_provisional": {
+        "x": 0.5,
+        "y": 0.53
+      }
+    },
+    "n06_audiencia_fraude": {
+      "foco_mesa_audiencia": {
+        "x": 0.5,
+        "y": 0.53
+      }
+    },
+    "n06_collado_final": {
+      "foco_luces_sant_lluc": {
+        "x": 0.72,
+        "y": 0.44
+      }
+    },
+    "n06_pacto_bernat": {
+      "foco_bolsa_pacto": {
+        "x": 0.31,
+        "y": 0.58
+      }
+    }
+  },
+  "manifest_version": 1,
+  "schema_version": "visual_manifest_v1",
+  "world_id": "aventura_el_testigo_de_ulldecona_001"
+}

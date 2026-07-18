@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <filter id="worn" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency=".055" numOctaves="3" seed="19" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5"/>
+    </filter>
+  </defs>
+  <g stroke="#735438" fill="none" filter="url(#worn)" opacity=".9">
+    <circle cx="60" cy="60" r="52" stroke-width="3"/>
+    <circle cx="60" cy="60" r="45" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <circle cx="60" cy="60" r="28" stroke-width="1.4"/>
+    <path d="M45 70V48h8V38h7v10h8V42h7v28M41 70h38M50 70v-9h8v9M64 70V57h7v13" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M50 79c7 5 13 5 20 0M43 84c11 8 23 9 35 0" stroke-width="1.5"/>
+    <path d="M23 43l5 2m-7 7 6 1m66-10-5 2m7 7-6 1M38 22l3 5m41-5-3 5" stroke-width="2"/>
+  </g>
+  <g fill="#735438" font-family="Courier New,monospace" font-weight="700" text-anchor="middle">
+    <text x="60" y="18" font-size="8" letter-spacing="1.2">CUSTODIA</text>
+    <text x="60" y="109" font-size="7.5" letter-spacing="1">ULLDECONA</text>
+    <circle cx="19" cy="60" r="2"/>
+    <circle cx="101" cy="60" r="2"/>
+  </g>
+</svg>

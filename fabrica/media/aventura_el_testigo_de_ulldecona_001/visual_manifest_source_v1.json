@@ -1,0 +1,1259 @@
+{
+  "assets": [
+    {
+      "alt": "Calabozo de piedra del castillo de Ulldecona con puerta baja, escalera al patio, lampara de guardia y cadena en el suelo",
+      "approved_file": "scenes/calabozo_apertura_r2.webp",
+      "asset_id": "scene_calabozo_apertura",
+      "function": "orientacion_y_presion",
+      "notes": "Revision ambiental fotorrealista aprobada por el usuario el 2026-07-17. Conserva sin cambios las diseños de personaje ficticios de Arnau y Mateu.",
+      "provider": "chatgpt_manual",
+      "public_file": "scenes/calabozo_apertura_r2.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.personajes_visibles",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "pnj:albert",
+        "recurso:inv_eslabon_repuesto"
+      ],
+      "source_nodes": [
+        "n01_calabozo_decision"
+      ],
+      "source_signature": "sha256:ea583100046f2d08149b9559aa8eeccd235ace7239ff7261c685dcb839347d67",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Corredor vac?o de la cisterna con tapa cerrada, cierre aceitado, fragmento de sello y canal de desag?e",
+      "approved_file": "scenes/cisterna_investigacion.webp",
+      "asset_id": "scene_cisterna_investigacion",
+      "function": "investigacion_material",
+      "notes": "Placa ambiental sin personajes aprobada por el director el 2026-07-17. Muestra un cierre recientemente alterado sin revelar autor?a ni conclusi?n.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/cisterna_investigacion.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.personajes_visibles",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_fragmento_sello_registro"
+      ],
+      "source_nodes": [
+        "n02_regreso_cisterna"
+      ],
+      "source_signature": "sha256:807df8e618d3c621d873a1f027b4ec3adc43162a0f1f544ce5d01a6198f313e1",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Arnau Cervera, escribano auxiliar y custodio improvisado",
+      "approved_file": "characters/arnau.webp",
+      "asset_id": "char_ramon",
+      "function": "referencia_protagonista",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/arnau.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity.nombre",
+        "entity.rol",
+        "entity.limitacion",
+        "visual_continuity"
+      ],
+      "source_entities": [
+        "jugador"
+      ],
+      "source_nodes": [],
+      "source_signature": "sha256:ad33ceb5f01146dd81dc88531696927fec0f83cb58530169ee30b0670c32b7f6",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Mateu Rius, cantero acusado y testigo incomodo",
+      "approved_file": "characters/mateu.webp",
+      "asset_id": "char_albert",
+      "function": "referencia_pnj_central",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/mateu.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity",
+        "visual_continuity",
+        "node.personajes_visibles",
+        "node.detalle_actual"
+      ],
+      "source_entities": [
+        "pnj:albert"
+      ],
+      "source_nodes": [
+        "n01_calabozo_decision",
+        "n02_liberar_albert",
+        "n02_regreso_cisterna"
+      ],
+      "source_signature": "sha256:c4ef27616739cb5f4d78a30758bcbea99021c3d04dc61f19ba7e4d8fe03e200c",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Cadena oxidada con un remache sustituido y aceite oscuro",
+      "approved_file": "props/cadena_reparada.webp",
+      "asset_id": "prop_cadena_reparada",
+      "function": "consulta_material_custodia",
+      "notes": "Referencia aprobada por el director; muestra cadena usada y enlace de sustituci?n sin atribuir autor?a.",
+      "provider": "user_approved_reference",
+      "public_file": "props/cadena_reparada.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity",
+        "node.detalle_actual",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_eslabon_repuesto"
+      ],
+      "source_nodes": [
+        "n01_calabozo_decision"
+      ],
+      "source_signature": "sha256:9d98346f561c263dfc6594190f40eed1cf2185eb214d2b8b5326db6690350c2b",
+      "status": "approved",
+      "style_version": 1,
+      "type": "prop"
+    },
+    {
+      "alt": "Fragmento desgastado del sello del registro",
+      "approved_file": "props/fragmento_sello.webp",
+      "asset_id": "prop_fragmento_sello",
+      "function": "consulta_prueba_material",
+      "notes": "Referencia aprobada por el director; muestra fragmento parcial sin reconstruir el sello ni anticipar la acusaci?n.",
+      "provider": "user_approved_reference",
+      "public_file": "props/fragmento_sello.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity",
+        "node.detalle_actual",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_fragmento_sello_registro"
+      ],
+      "source_nodes": [
+        "n02_regreso_cisterna"
+      ],
+      "source_signature": "sha256:e01b1c11cc0ac3d15d7b18b08c04da4a1d49ff40e47e3ce2cadfda62c5dd077c",
+      "status": "approved",
+      "style_version": 1,
+      "type": "prop"
+    },
+    {
+      "alt": "Casas viejas en desmontaje con cuerda de apeo marcada, piedra reservada, vigas y salida hacia los olivares",
+      "approved_file": "scenes/casas_viejas_sibila.webp",
+      "asset_id": "scene_casas_viejas_sibila",
+      "function": "orientacion_refugio_y_prueba_material",
+      "notes": "Placa ambiental sin personajes principales, aprobada por el director el 2026-07-17. Conserva cuerda marcada, vigas, piedra reservada y ruta de salida sin revelar una decisi?n posterior.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/casas_viejas_sibila.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.personajes_visibles",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_cuerda_apeo_marcada"
+      ],
+      "source_nodes": [
+        "n02_liberar_albert"
+      ],
+      "source_signature": "sha256:9dc69402127a5c6a13c0f6e54064a50dac26c13ffca1244f7bdc5cd496a3fde2",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Sibila Ferré, hermana de Mateu y trabajadora de las casas en desmontaje",
+      "approved_file": "characters/sibila.webp",
+      "asset_id": "char_sibila",
+      "function": "referencia_persistente_personaje",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/sibila.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity",
+        "visual_continuity"
+      ],
+      "source_entities": [
+        "pnj:sibila"
+      ],
+      "source_nodes": [
+        "n02_liberar_albert"
+      ],
+      "source_signature": "sha256:a31a438f8bba1f5f6a73978f1f203247850f1e11c82a9b894e3de25f07b4427c",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Bernat Llorca, encargado del traslado y autoridad local",
+      "approved_file": "characters/bernat.webp",
+      "asset_id": "char_bernat",
+      "function": "referencia_persistente_personaje",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/bernat.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity.nombre_visible",
+        "entity.rol",
+        "entity.limitacion",
+        "visual_continuity"
+      ],
+      "source_entities": [
+        "pnj:bernat"
+      ],
+      "source_nodes": [],
+      "source_signature": "sha256:42466d5a54ec5a6d4cec7dd94dc0c0046e5e642489a58f4485562306b6872526",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Miquel Sabater, auxiliar del registro y testigo ambiguo",
+      "approved_file": "characters/miquel.webp",
+      "asset_id": "char_miquel",
+      "function": "referencia_persistente_personaje",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/miquel.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity.nombre_visible",
+        "entity.rol",
+        "entity.limitacion",
+        "visual_continuity"
+      ],
+      "source_entities": [
+        "pnj:miquel"
+      ],
+      "source_nodes": [],
+      "source_signature": "sha256:dc697462ee720708c5463da9a2f77f4999f426e6778b384c93edb03ac61ba201",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Fray Pere de Cardona, autoridad de la encomienda que recibe testimonios",
+      "approved_file": "characters/fray_pere.webp",
+      "asset_id": "char_fray_pere",
+      "function": "referencia_persistente_personaje",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/fray_pere.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity.nombre_visible",
+        "entity.rol",
+        "entity.limitacion",
+        "visual_continuity"
+      ],
+      "source_entities": [
+        "pnj:fray_pere"
+      ],
+      "source_nodes": [],
+      "source_signature": "sha256:7b0795593ab81ed71e602473b969187465bbf465c5289b5aa4a57956362b39b2",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Guillem Miró, oficial del reparto cuyo destino desencadena la investigaci?n",
+      "approved_file": "characters/guillem.webp",
+      "asset_id": "char_guillem",
+      "function": "referencia_persistente_personaje",
+      "notes": "Diseño de personaje completamente ficticio, generado sin fotografías personales de referencia para la entrega pública.",
+      "provider": "openai_imagegen_fictional",
+      "public_file": "characters/guillem.webp",
+      "revision": 2,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity.nombre_visible",
+        "entity.rol",
+        "entity.limitacion",
+        "visual_continuity"
+      ],
+      "source_entities": [
+        "pnj:guillem"
+      ],
+      "source_nodes": [],
+      "source_signature": "sha256:25af4fe4927b6085d8fc0aa20fd72122b8528941c43721b4a7540ec6f0c2dab3",
+      "status": "approved",
+      "style_version": 1,
+      "type": "character"
+    },
+    {
+      "alt": "Tablilla de madera desgastada con marcas de reparto no legibles",
+      "approved_file": "props/tablilla_reparto.webp",
+      "asset_id": "prop_tablilla_reparto",
+      "function": "consulta_documento_material",
+      "notes": "Referencia aprobada por el director; las marcas no deben revelar datos futuros ni producir texto legible.",
+      "provider": "user_approved_reference",
+      "public_file": "props/tablilla_reparto.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity",
+        "node.detalle_actual",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_tablilla_reparto"
+      ],
+      "source_nodes": [],
+      "source_signature": "sha256:a5679369a9735236ec4340f3c2dc5308b5e4e9283c6092adcd349a9500aece49",
+      "status": "approved",
+      "style_version": 1,
+      "type": "prop"
+    },
+    {
+      "alt": "Cuerda de apeo de c??amo con nudos de medida desplazados y dos marcas de hilo rojo",
+      "approved_file": "props/cuerda_apeo_marcada.webp",
+      "asset_id": "prop_cuerda_apeo_marcada",
+      "function": "consulta_medida_alterada",
+      "notes": "Ficha aprobada por el director el 2026-07-17; evidencia la alteraci?n material sin atribuir autor?a ni revelar una medida exacta.",
+      "provider": "director_approved_generated",
+      "public_file": "props/cuerda_apeo_marcada.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "entity",
+        "node.detalle_actual",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_cuerda_apeo_marcada"
+      ],
+      "source_nodes": [
+        "n02_liberar_albert"
+      ],
+      "source_signature": "sha256:8950724242c6318977ed4bbdf2742b393f66fd36e0c3b01418f3729552c189ae",
+      "status": "approved",
+      "style_version": 1,
+      "type": "prop"
+    },
+    {
+      "alt": "Barranco bajo olivares con muro de piedra seca, calera abandonada y paso de canteros",
+      "approved_file": "scenes/barranco_olivares.webp",
+      "asset_id": "scene_barranco_olivares",
+      "function": "orientacion_rutas_y_presion",
+      "notes": "Placa ambiental aprobada por el director el 2026-07-17. Muestra las rutas f?sicas antes de cualquier derrumbe, descenso o aparici?n de guardias.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/barranco_olivares.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n03_barranco_olivares"
+      ],
+      "source_signature": "sha256:d8b94c7079a2b6459a469044e853d19d4abf647d69e3189416fd8fcbbab2df45",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Refugio vac?o de canteros con banco de piedra, tinaja, croquis de carb?n y salidas hacia corrales y Godall",
+      "approved_file": "scenes/refugio_canteros.webp",
+      "asset_id": "scene_refugio_canteros",
+      "function": "orientacion_refugio_y_rutas",
+      "notes": "Placa ambiental aprobada por el director el 2026-07-17. Muestra el croquis y tres rutas f?sicas sin convertirlas en texto ni adelantar decisiones.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/refugio_canteros.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n04_refugio_canteros"
+      ],
+      "source_signature": "sha256:8884ade4f50b652de69767e2dc9e43d25bd50d89269f95b5f58ed8aa26af0fec",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Pozo nuevo de Sant Lluc con mesa de reparto, estacas, carros y familias an?nimas",
+      "approved_file": "scenes/pozo_sant_lluc.webp",
+      "asset_id": "scene_pozo_sant_lluc",
+      "function": "orientacion_audiencia_y_reparto",
+      "notes": "Placa ambiental con figurantes an?nimos aprobada por el director el 2026-07-17. Ninguna figura representa a un personaje principal identificable.",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/pozo_sant_lluc.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n04_pozo_sant_lluc"
+      ],
+      "source_signature": "sha256:897906991fd7ca12d464e25a5f9c8418cc549986baf6f94921306ade984dc310",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Pozo de Sant Lluc con carreteros alertados, mulas embarradas y ropa mojada junto a la mesa de reparto",
+      "approved_file": "scenes/pozo_sant_lluc_carreteros_alertados.webp",
+      "asset_id": "scene_pozo_sant_lluc_carreteros_alertados",
+      "function": "variante_llegada_publica",
+      "notes": "Variante f?sica aprobada por el director el 2026-07-17. A?ade carreteros, mulas y ropa mojada sin modificar geograf?a, mesa ni pozo.",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/pozo_sant_lluc_carreteros_alertados.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.entorno_visible"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n04_pozo_sant_lluc"
+      ],
+      "source_signature": "sha256:5a69dc686512378e0f5e8d931f391e6226d9b3a67f5619d0075892b637b47f80",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene_variant",
+      "variant_guard": {
+        "requires": [
+          "flag_carreteros_alertados"
+        ]
+      },
+      "variant_of": "scene_pozo_sant_lluc"
+    },
+    {
+      "alt": "Hondonada exterior de la cisterna con cu?a breada, herramientas lavadas y canal de desag?e",
+      "approved_file": "scenes/hondonada_castillo.webp",
+      "asset_id": "scene_hondonada_castillo",
+      "function": "orientacion_investigacion_material",
+      "notes": "Placa ambiental aprobada por el director el 2026-07-17. Presenta evidencias materiales parciales sin atribuir el cierre a una persona.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/hondonada_castillo.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n04_hondonada_castillo"
+      ],
+      "source_signature": "sha256:8c3a6758b94b5326c3814990e73533fe51e4bab1206c98dacc0571ac29981973",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Acequia detr?s de corrales nuevos con bolsa de documentos y dos salidas estrechas",
+      "approved_file": "scenes/acequia_corrales.webp",
+      "asset_id": "scene_acequia_corrales",
+      "function": "orientacion_negociacion_y_salida",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17. Muestra geograf?a de negociaci?n privada sin personajes principales.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/acequia_corrales.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n04_encuentro_bernat"
+      ],
+      "source_signature": "sha256:f4868bb92b7d1de8ba941867620b8dcba5b715bcdd7d108a65c988133c0e44c1",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Puerta baja del castillo con cadena reparada, tablilla provisional y camino abierto",
+      "approved_file": "scenes/puerta_baja_castillo.webp",
+      "asset_id": "scene_puerta_baja_castillo",
+      "function": "orientacion_custodia_aparente",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/puerta_baja_castillo.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [
+        "recurso:inv_eslabon_repuesto",
+        "recurso:inv_tablilla_reparto"
+      ],
+      "source_nodes": [
+        "n02_custodia_aparente"
+      ],
+      "source_signature": "sha256:c9896b26ef384fb8eeb0227580fcaa8e4a7f56332cc3a8b734690b206e5a713b",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Camino de Valencia con control an?nimo de guardia, carros de piedra, tablillas y acequia lateral",
+      "approved_file": "scenes/camino_valencia.webp",
+      "asset_id": "scene_camino_valencia",
+      "function": "orientacion_control_y_rutas",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17. Guardias y trabajadores son figurantes an?nimos.",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/camino_valencia.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n03_camino_valencia"
+      ],
+      "source_signature": "sha256:497cabe31d97ce2f3662bbc6550adf3b8959e60bf4080d48a0cf3421ff050584",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Canal de desag?e bajo la muralla con reja exterior, rastro de brea y losa m?vil",
+      "approved_file": "scenes/desague_cisterna.webp",
+      "asset_id": "scene_desague_cisterna",
+      "function": "orientacion_salidas_cisterna",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/desague_cisterna.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n03_desague_cisterna"
+      ],
+      "source_signature": "sha256:80a6f167166070fbdc870991224dcdaaa48812b0dc7e42b9fd3895af52647b67",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Plaza provisional de Sant Lluc con mesa de audiencia vac?a, familias an?nimas, pozo y guardias al fondo",
+      "approved_file": "scenes/plaza_sant_lluc.webp",
+      "asset_id": "scene_plaza_sant_lluc",
+      "function": "orientacion_audiencia_publica",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17. Multitud an?nima y sin personajes principales identificables.",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/plaza_sant_lluc.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n05_reparto_congregado",
+        "n06_audiencia_fraude",
+        "n06_audiencia_muerte",
+        "n06_audiencia_testimonio"
+      ],
+      "source_signature": "sha256:604444b5e472faf31dcb2be474b437f25452ae3b13494eca186cb9ec4613f819",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Corral exterior de Sant Lluc con pesebre, bolsa sellada y dos salidas desiguales",
+      "approved_file": "scenes/corral_exterior.webp",
+      "asset_id": "scene_corral_exterior",
+      "function": "orientacion_pacto_privado",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/corral_exterior.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n05_corral_bernat",
+        "n06_pacto_bernat"
+      ],
+      "source_signature": "sha256:12d59eed01895403864b38bb76f8bab47ba254746aa78ee46d0b30ab2cd3ccab",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Senda nocturna de Godall con bifurcaci?n, abrigo de roca, collado y luces lejanas de Sant Lluc",
+      "approved_file": "scenes/noche_godall.webp",
+      "asset_id": "scene_noche_godall",
+      "function": "orientacion_decision_final",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17. Muestra la bifurcaci?n decisiva sin personajes principales.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/noche_godall.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n05_noche_godall"
+      ],
+      "source_signature": "sha256:a0d7af47f41d418f1dc0d995c38e0be917d21ba4a25d70e665c3c1c9de766106",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Collado de Godall al amanecer con bifurcaci?n, castillo oscuro y luces lejanas de Sant Lluc",
+      "approved_file": "scenes/collado_godall.webp",
+      "asset_id": "scene_collado_godall",
+      "function": "orientacion_decision_final",
+      "notes": "Placa ambiental integrada autom?ticamente el 2026-07-17. Expone las tres direcciones de la decisi?n final sin personajes principales.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/collado_godall.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.ubicacion",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.presion_visible",
+        "node.objeto_conflicto",
+        "node.entorno_visible",
+        "node.focos_consulta"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n06_collado_final"
+      ],
+      "source_signature": "sha256:f7c53707ac5773a53d1a36956e8ed81e802df82e07261a4d61a9646d8778a2b8",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Plaza de Sant Lluc con mesa de audiencia sostenida por vecinos y guardias an?nimos alcanzando el cerco",
+      "approved_file": "scenes/plaza_sant_lluc_cerco_encima.webp",
+      "asset_id": "scene_plaza_sant_lluc_cerco_encima",
+      "function": "variante_audiencia_amenazada",
+      "notes": "Variante f?sica aprobada por el director el 2026-07-17. La mesa, la multitud y las lanzas hacen visible la llegada del cerco.",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/plaza_sant_lluc_cerco_encima.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.entorno_visible"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n05_reparto_congregado"
+      ],
+      "source_signature": "sha256:4b3f1bfeaef8f9f4c68158ed0b34e665e6b9ec206d287fabff641ea1bb43e336",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene_variant",
+      "variant_guard": {
+        "requires": [
+          "presion>=6"
+        ]
+      },
+      "variant_of": "scene_plaza_sant_lluc"
+    },
+    {
+      "alt": "Corral de Sant Lluc con bolsa abultada por la tablilla, salida a Godall abierta y regreso bloqueado",
+      "approved_file": "scenes/corral_tablilla_entregada.webp",
+      "asset_id": "scene_corral_tablilla_entregada",
+      "function": "variante_pacto_documental",
+      "notes": "Variante f?sica aprobada por direcci?n el 2026-07-17. La tablilla ha sido entregada y queda dentro de la bolsa de Bernat.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/corral_tablilla_entregada.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.entorno_visible"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n05_corral_bernat",
+        "n06_pacto_bernat"
+      ],
+      "source_signature": "sha256:c020ea62bfa4a0cd4eab8efa7c66196d3b952e682a6a49facb93d58218d9d867",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene_variant",
+      "variant_guard": {
+        "forbids": [
+          "flag_corral_sello_mostrado"
+        ],
+        "requires": [
+          "flag_bernat_tiene_tablilla"
+        ]
+      },
+      "variant_of": "scene_corral_exterior"
+    },
+    {
+      "alt": "Puerta baja del castillo al amanecer con cadena reparada tras borrar la prueba y guardia anonimo al fondo",
+      "approved_file": "scenes/final_mateu_recapturado.webp",
+      "asset_id": "scene_final_albert_recapturado",
+      "function": "final_recaptura_y_borrado_de_prueba",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_mateu_recapturado.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f01_albert_recapturado"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Pozo de Sant Lluc con estacas ya clavadas, acta cerrada y familias anonimas apartadas",
+      "approved_file": "scenes/final_bernat_impone_version.webp",
+      "asset_id": "scene_final_bernat_impone_version",
+      "function": "final_reparto_impuesto",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_bernat_impone_version.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f02_bernat_impone_version"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Plaza de Sant Lluc con mesa de audiencia, pruebas separadas, estacas retiradas y familias anonimas",
+      "approved_file": "scenes/final_verdad_entera.webp",
+      "asset_id": "scene_final_verdad_entera",
+      "function": "final_verdad_registrada",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_verdad_entera.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f03_verdad_entera"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Pozo de Sant Lluc con estacas retiradas y apiladas, terreno abierto y familias anonimas",
+      "approved_file": "scenes/final_reparto_reabierto.webp",
+      "asset_id": "scene_final_reparto_reabierto",
+      "function": "final_reparto_suspendido",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_reparto_reabierto.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f04_reparto_reabierto"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Camino bajo Sant Lluc con nueva escolta anonima, acta y cadena separadas de los hombres de Bernat",
+      "approved_file": "scenes/final_mateu_bajo_juicio.webp",
+      "asset_id": "scene_final_albert_bajo_juicio",
+      "function": "final_custodia_impugnada",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_mateu_bajo_juicio.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f05_albert_bajo_juicio"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Limite de Sant Lluc al amanecer con carros detenidos, guardias anonimos indecisos y camino abierto",
+      "approved_file": "scenes/final_limite_sant_lluc.webp",
+      "asset_id": "scene_final_limite_sant_lluc",
+      "function": "final_escape_del_cerco",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_limite_sant_lluc.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f06_albert_fuera_del_cerco"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Camino de regreso a Sant Lluc de noche con pozo iluminado, audiencia anonima y castillo al fondo",
+      "approved_file": "scenes/final_regreso_testimonio.webp",
+      "asset_id": "scene_final_regreso_testimonio",
+      "function": "final_regreso_a_testimonio",
+      "notes": "",
+      "people_policy": "anonymous_crowd",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/final_regreso_testimonio.webp",
+      "revision": 1,
+      "source_nodes": [
+        "f09_regreso_con_testimonio"
+      ],
+      "source_signature": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene"
+    },
+    {
+      "alt": "Corral de Sant Lluc con fragmento de sello expuesto junto a una l?mpara y salida a Godall abierta",
+      "approved_file": "scenes/corral_sello_mostrado.webp",
+      "asset_id": "scene_corral_sello_mostrado",
+      "function": "variante_acusacion_sello",
+      "notes": "Variante f?sica aprobada por direcci?n el 2026-07-17. El sello se muestra como acusaci?n y Arnau conserva la prueba.",
+      "provider": "director_approved_generated",
+      "public_file": "scenes/corral_sello_mostrado.webp",
+      "revision": 1,
+      "signature_fields": [
+        "visual_style_contract.version",
+        "node.id",
+        "node.situacion_visible",
+        "node.detalle_actual",
+        "node.entorno_visible"
+      ],
+      "source_entities": [],
+      "source_nodes": [
+        "n05_corral_bernat",
+        "n06_pacto_bernat"
+      ],
+      "source_signature": "sha256:c020ea62bfa4a0cd4eab8efa7c66196d3b952e682a6a49facb93d58218d9d867",
+      "status": "approved",
+      "style_version": 1,
+      "type": "scene_variant",
+      "variant_guard": {
+        "forbids": [
+          "flag_bernat_tiene_tablilla"
+        ],
+        "requires": [
+          "flag_corral_sello_mostrado"
+        ]
+      },
+      "variant_of": "scene_corral_exterior"
+    }
+  ],
+  "bindings": {
+    "entities": {
+      "jugador": {
+        "character_asset": "char_ramon"
+      },
+      "pnj:albert": {
+        "character_asset": "char_albert"
+      },
+      "pnj:bernat": {
+        "character_asset": "char_bernat"
+      },
+      "pnj:fray_pere": {
+        "character_asset": "char_fray_pere"
+      },
+      "pnj:guillem": {
+        "character_asset": "char_guillem"
+      },
+      "pnj:miquel": {
+        "character_asset": "char_miquel"
+      },
+      "pnj:sibila": {
+        "character_asset": "char_sibila"
+      },
+      "recurso:inv_cuerda_apeo_marcada": {
+        "prop_asset": "prop_cuerda_apeo_marcada"
+      },
+      "recurso:inv_eslabon_repuesto": {
+        "prop_asset": "prop_cadena_reparada"
+      },
+      "recurso:inv_fragmento_sello_registro": {
+        "prop_asset": "prop_fragmento_sello"
+      },
+      "recurso:inv_tablilla_reparto": {
+        "prop_asset": "prop_tablilla_reparto"
+      }
+    },
+    "nodes": {
+      "f01_albert_recapturado": {
+        "scene_asset": "scene_final_albert_recapturado"
+      },
+      "f02_bernat_impone_version": {
+        "scene_asset": "scene_final_bernat_impone_version"
+      },
+      "f03_verdad_entera": {
+        "scene_asset": "scene_final_verdad_entera"
+      },
+      "f04_reparto_reabierto": {
+        "scene_asset": "scene_final_reparto_reabierto"
+      },
+      "f05_albert_bajo_juicio": {
+        "scene_asset": "scene_final_albert_bajo_juicio"
+      },
+      "f06_albert_fuera_del_cerco": {
+        "scene_asset": "scene_final_limite_sant_lluc"
+      },
+      "f07_pacto_bajo_sello": {
+        "scene_asset": "scene_corral_exterior"
+      },
+      "f08_camino_godall": {
+        "scene_asset": "scene_collado_godall"
+      },
+      "f09_regreso_con_testimonio": {
+        "scene_asset": "scene_final_regreso_testimonio"
+      },
+      "n01_calabozo_decision": {
+        "scene_asset": "scene_calabozo_apertura"
+      },
+      "n02_custodia_aparente": {
+        "scene_asset": "scene_puerta_baja_castillo"
+      },
+      "n02_liberar_albert": {
+        "scene_asset": "scene_casas_viejas_sibila"
+      },
+      "n02_regreso_cisterna": {
+        "scene_asset": "scene_cisterna_investigacion"
+      },
+      "n03_barranco_olivares": {
+        "scene_asset": "scene_barranco_olivares"
+      },
+      "n03_camino_valencia": {
+        "scene_asset": "scene_camino_valencia"
+      },
+      "n03_desague_cisterna": {
+        "scene_asset": "scene_desague_cisterna"
+      },
+      "n04_encuentro_bernat": {
+        "scene_asset": "scene_acequia_corrales"
+      },
+      "n04_hondonada_castillo": {
+        "scene_asset": "scene_hondonada_castillo"
+      },
+      "n04_pozo_sant_lluc": {
+        "scene_asset": "scene_pozo_sant_lluc"
+      },
+      "n04_refugio_canteros": {
+        "scene_asset": "scene_refugio_canteros"
+      },
+      "n05_corral_bernat": {
+        "scene_asset": "scene_corral_exterior"
+      },
+      "n05_noche_godall": {
+        "scene_asset": "scene_noche_godall"
+      },
+      "n05_reparto_congregado": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_audiencia_fraude": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_audiencia_muerte": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_audiencia_testimonio": {
+        "scene_asset": "scene_plaza_sant_lluc"
+      },
+      "n06_collado_final": {
+        "scene_asset": "scene_collado_godall"
+      },
+      "n06_pacto_bernat": {
+        "scene_asset": "scene_corral_exterior"
+      }
+    }
+  },
+  "entity_bindings": [
+    {
+      "asset_id": "scene_noche_godall",
+      "id": "scene_noche_godall",
+      "nodes": [
+        "n05_noche_godall"
+      ]
+    },
+    {
+      "asset_id": "scene_collado_godall",
+      "id": "scene_collado_godall",
+      "nodes": [
+        "n06_collado_final"
+      ]
+    }
+  ],
+  "hotspots": {
+    "n01_calabozo_decision": {
+      "foco_cadena_reparada": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "n02_custodia_aparente": {
+      "foco_tablilla_provisional": {
+        "x": 0.38,
+        "y": 0.62
+      }
+    },
+    "n02_liberar_albert": {
+      "foco_cuerda_apeo": {
+        "x": 0.55,
+        "y": 0.65
+      }
+    },
+    "n02_regreso_cisterna": {
+      "foco_tapa_cisterna": {
+        "x": 0.37,
+        "y": 0.6
+      }
+    },
+    "n03_barranco_olivares": {
+      "foco_muro_seco": {
+        "x": 0.26,
+        "y": 0.47
+      }
+    },
+    "n03_camino_valencia": {
+      "foco_control_guardia": {
+        "x": 0.52,
+        "y": 0.44
+      }
+    },
+    "n03_desague_cisterna": {
+      "foco_reja_exterior": {
+        "x": 0.5,
+        "y": 0.34
+      }
+    },
+    "n04_encuentro_bernat": {
+      "foco_bolsa_documentos": {
+        "x": 0.3,
+        "y": 0.59
+      }
+    },
+    "n04_hondonada_castillo": {
+      "foco_cuna_cierre": {
+        "x": 0.46,
+        "y": 0.6
+      }
+    },
+    "n04_pozo_sant_lluc": {
+      "foco_mesa_reparto": {
+        "x": 0.31,
+        "y": 0.48
+      }
+    },
+    "n04_refugio_canteros": {
+      "foco_croquis_caminos": {
+        "x": 0.47,
+        "y": 0.34
+      }
+    },
+    "n05_corral_bernat": {
+      "foco_bolsa_sellada": {
+        "x": 0.31,
+        "y": 0.58
+      }
+    },
+    "n05_noche_godall": {
+      "foco_bifurcacion": {
+        "x": 0.39,
+        "y": 0.48
+      }
+    },
+    "n05_reparto_congregado": {
+      "foco_mesa_provisional": {
+        "x": 0.5,
+        "y": 0.53
+      }
+    },
+    "n06_audiencia_fraude": {
+      "foco_mesa_audiencia": {
+        "x": 0.5,
+        "y": 0.53
+      }
+    },
+    "n06_collado_final": {
+      "foco_luces_sant_lluc": {
+        "x": 0.72,
+        "y": 0.44
+      }
+    },
+    "n06_pacto_bernat": {
+      "foco_bolsa_pacto": {
+        "x": 0.31,
+        "y": 0.58
+      }
+    }
+  },
+  "inventory": "visual_inventory_v1.json",
+  "manifest_version": 1,
+  "runtime_policy": {
+    "forbid_base64_bundle": true,
+    "forbid_text_matching": true,
+    "missing_asset": "textual_fallback",
+    "missing_manifest": "textual_fallback",
+    "publish_only_status": "approved",
+    "unknown_version": "ignore_safely"
+  },
+  "schema_version": "visual_manifest_source_v1",
+  "source_world": "worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+  "status": "pilot_preimplementation",
+  "style_contract": "visual_style_contract_v1.json",
+  "updated_at": "2026-07-18",
+  "world_id": "aventura_el_testigo_de_ulldecona_001"
+}

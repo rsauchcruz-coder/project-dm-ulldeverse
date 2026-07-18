@@ -1,0 +1,107 @@
+{
+  "tipo_documento": "semilla_mundo",
+  "version": "1.2",
+  "origen": {
+    "generado_por": "pregenerador",
+    "confirmada_por_usuario": true
+  },
+  "familia_experiencia": {
+    "generos": [
+      "aventura medieval",
+      "drama histórico"
+    ],
+    "subgeneros": [
+      "persecución",
+      "misterio político",
+      "supervivencia realista"
+    ]
+  },
+  "nucleo_distintivo": {
+    "fantasia_jugador": "Proteger a un prisionero perseguido mientras se reconstruye, junto a él, la verdad fragmentaria sobre una muerte capaz de alterar el traslado de Ulldecona al valle.",
+    "situacion_semilla": "Ulldecona, 1274. Mientras sus habitantes preparan el traslado del castillo al valle, muere el oficial encargado de registrar solares y derechos de agua. Arnau Cervera debe sacar del castillo a Mateu Rius, el único preso que afirma haberlo presenciado y que quizá no fue un simple testigo.",
+    "foco_central": "La relación entre Arnau Cervera y Mateu Rius durante la huida por Ulldecona: Arnau necesita su testimonio sobre la muerte del oficial, pero debe vigilarlo, protegerlo y decidir cuándo creerle.",
+    "friccion_principal": "Comprobar los recuerdos de Mateu obliga a regresar a lugares expuestos, tratar con personas comprometidas o conservar pruebas que revelan el recorrido. Cuanto más cerca están de la verdad, más difícil resulta mantener vivo al testigo.",
+    "tension_tematica": "Cuánto merece ser protegido alguien que quizá sea culpable cuando su testimonio podría evitar una injusticia o quebrar a una comunidad que empieza de nuevo.",
+    "motivos_materiales": [
+      "las torres, cisternas y calabozos del castillo de Ulldecona",
+      "los senderos pedregosos y abrigos de la sierra de Godall",
+      "los olivos monumentales, muros de piedra seca y tierra rojiza",
+      "una cadena de preso con un eslabón sustituido recientemente",
+      "un fragmento del sello del registro manchado de aceite"
+    ]
+  },
+  "promesa_jugable": "Atravesar la Ulldecona de 1274, protegiendo a un preso cuyos recuerdos pueden esclarecer una muerte, mientras Arnau decide qué pruebas arriesgar, cuándo confiar en Mateu y si la verdad merece el daño que causará.",
+  "papel_jugador": {
+    "descripcion": "Arnau Cervera, custodio improvisado de Mateu Rius, debe mantenerlo con vida mientras investiga la muerte del oficial.",
+    "limitacion_significativa": "Arnau no tiene autoridad para sacar a Mateu del castillo: juntos parecen fugitivos y no puede exigir ayuda ni paso franco a guardias o vecinos."
+  },
+  "orientacion": {
+    "ejes": [
+      {
+        "nombre": "presión y peligro",
+        "intensidad": "alto",
+        "interpretacion": "Los caminos se cierran, los refugios duran poco y comprobar un recuerdo obliga a exponerse ante quienes buscan recuperar o silenciar al prisionero."
+      },
+      {
+        "nombre": "ambigüedad moral",
+        "intensidad": "alto",
+        "interpretacion": "Proteger a Mateu puede exigir mentir, abandonar a otras personas o preservar a alguien implicado en la muerte del oficial; la culpa y la confianza tienen peso emocional directo."
+      },
+      {
+        "nombre": "intriga política",
+        "intensidad": "bajo",
+        "interpretacion": "El reparto de solares, agua y autoridad durante el traslado explica el peligro, pero no debe desplazar la investigación, la persecución ni el vínculo entre Arnau y Mateu."
+      }
+    ]
+  },
+  "experiencia_jugable": {
+    "resumen_usuario": "Quiero leer con calma, contrastar pruebas y decidir qué verdad puedo sostener sin dejar de proteger a una persona posiblemente culpable.",
+    "prioridades": [
+      "descubrir",
+      "demostrar",
+      "proteger"
+    ],
+    "ritmo": "pausado",
+    "densidad": "intensa",
+    "funcion_objetos": "condicionar_capacidades",
+    "funcion_deducciones": "reconstruir_verdad",
+    "naturaleza_decisiones": "coste_moral_social",
+    "severidad_error": "irreversible",
+    "horizonte_consecuencias": "mixto"
+  },
+  "aportaciones_personales": [
+    {
+      "tipo": "lugar",
+      "descripcion": "Ulldecona y su entorno real, incluyendo el castillo, la sierra de Godall, los olivares monumentales, los muros de piedra seca y los caminos históricos.",
+      "prioridad": "obligatorio"
+    },
+    {
+      "tipo": "personaje",
+      "descripcion": "El jugador se llama Arnau Cervera.",
+      "prioridad": "obligatorio"
+    },
+    {
+      "tipo": "personaje",
+      "descripcion": "El preso y testigo se llama Mateu Rius.",
+      "prioridad": "obligatorio"
+    }
+  ],
+  "limites_contenido": {
+    "prohibido": [
+      "magia",
+      "fenómenos sobrenaturales",
+      "explicaciones incompatibles con la vida real"
+    ],
+    "solo_fuera_de_plano": [],
+    "moderado": []
+  },
+  "libertad_creativa": "equilibrada",
+  "notas_para_codex": [
+    "Mantener una ambientación histórica verosímil inspirada en la geografía y el patrimonio de Ulldecona, sin convertir sus lugares reales en elementos sobrenaturales.",
+    "Marco fijado: Ulldecona, 1274, durante el traslado autorizado de la población desde el castillo al valle. La muerte investigada y sus responsables son ficticios; el contexto material e histórico debe ser verosímil.",
+    "La intriga política debe actuar como presión de fondo; el centro de la experiencia es la persecución, la investigación y el vínculo cambiante entre Arnau y Mateu Rius.",
+    "No fijar todavía la explicación verdadera de la muerte del oficial, la responsabilidad definitiva de Mateu Rius, el antagonista final ni el desenlace correcto.",
+    "Todo misterio debe admitir una explicación humana, material y realista. La economía de objetos, pruebas y custodias se diseña después y debe superar qa:resources:gate.",
+    "La referencia editorial externa queda reducida a cualidades abstractas: autoridad disputada, lealtades frágiles, violencia con consecuencias y conflicto entre deber y afecto. No conservar nombres, símbolos, lugares ni tramas reconocibles."
+  ]
+}

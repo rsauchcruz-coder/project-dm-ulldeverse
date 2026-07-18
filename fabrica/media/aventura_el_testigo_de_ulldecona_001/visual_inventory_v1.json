@@ -1,0 +1,506 @@
+{
+  "schema_version": "visual_inventory_v1",
+  "world_id": "aventura_el_testigo_de_ulldecona_001",
+  "source_world": "worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+  "inventory_version": 1,
+  "policy": {
+    "default": "No generar una imagen por nodo",
+    "priorities": [
+      "orientacion inicial",
+      "localizaciones maestras",
+      "personajes persistentes",
+      "objetos consultables o causales",
+      "cambios fisicos relevantes",
+      "climax y familias de finales"
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "scene_calabozo_apertura",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "legacy_migration",
+      "source_nodes": [
+        "n01_calabozo_decision"
+      ],
+      "source_entities": [
+        "pnj:albert",
+        "recurso:inv_eslabon_repuesto"
+      ],
+      "function": "Orientar lugar, custodia, objeto de conflicto y presion inicial",
+      "reuse_policy": "Solo apertura y variantes que conserven custodia, localizacion y elementos visibles"
+    },
+    {
+      "asset_id": "scene_cisterna_investigacion",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "legacy_migration",
+      "source_nodes": [
+        "n02_regreso_cisterna"
+      ],
+      "source_entities": [
+        "pnj:albert",
+        "recurso:inv_fragmento_sello_registro"
+      ],
+      "function": "Representar investigacion material, cierre alterado y riesgo de regresar",
+      "reuse_policy": "Reutilizable solo mientras no cambien acceso, evidencia visible o estado fisico de la cisterna"
+    },
+    {
+      "asset_id": "char_ramon",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "legacy_migration",
+      "source_nodes": [],
+      "source_entities": [
+        "jugador"
+      ],
+      "function": "Referencia persistente del protagonista para fichas y escenas",
+      "reuse_policy": "Reutilizable con variantes de pose; no alterar identidad, edad aparente ni vestuario sin causa"
+    },
+    {
+      "asset_id": "char_albert",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "legacy_migration",
+      "source_nodes": [
+        "n01_calabozo_decision",
+        "n02_liberar_albert",
+        "n02_regreso_cisterna"
+      ],
+      "source_entities": [
+        "pnj:albert"
+      ],
+      "function": "Referencia persistente del PNJ central",
+      "reuse_policy": "Reutilizable con variantes de custodia, expresion y pose autorizadas por el estado"
+    },
+    {
+      "asset_id": "prop_cadena_reparada",
+      "type": "prop",
+      "priority": "essential",
+      "production_phase": "legacy_migration",
+      "source_nodes": [
+        "n01_calabozo_decision"
+      ],
+      "source_entities": [
+        "recurso:inv_eslabon_repuesto"
+      ],
+      "function": "Hacer consultable la manipulacion material de la custodia sin conceder la deduccion",
+      "reuse_policy": "Misma forma, remache, aceite, oxido y escala en ficha y escenas"
+    },
+    {
+      "asset_id": "prop_fragmento_sello",
+      "type": "prop",
+      "priority": "essential",
+      "production_phase": "legacy_migration",
+      "source_nodes": [
+        "n02_regreso_cisterna"
+      ],
+      "source_entities": [
+        "recurso:inv_fragmento_sello_registro"
+      ],
+      "function": "Representar una prueba material pequena sin revelar por si sola la acusacion final",
+      "reuse_policy": "Misma forma, desgaste, material y escala en todas las apariciones"
+    },
+    {
+      "asset_id": "scene_casas_viejas_sibila",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n02_liberar_albert"
+      ],
+      "source_entities": [
+        "recurso:inv_cuerda_apeo_marcada"
+      ],
+      "function": "Orientar el refugio familiar, la prueba material y la salida hacia los olivares sin representar personajes principales",
+      "reuse_policy": "Puede cubrir el nodo mientras se mantengan las casas en desmontaje, Sibila presente y la cuerda bajo su control"
+    },
+    {
+      "asset_id": "char_sibila",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [
+        "n02_liberar_albert"
+      ],
+      "source_entities": [
+        "pnj:sibila"
+      ],
+      "function": "Ficha persistente de Sibila Ferré",
+      "reuse_policy": "Reutilizable solo conservando identidad, edad aparente, trabajo y vestuario autorizado por el estado."
+    },
+    {
+      "asset_id": "char_bernat",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [],
+      "source_entities": [
+        "pnj:bernat"
+      ],
+      "function": "Ficha persistente de Bernat Llorca",
+      "reuse_policy": "Reutilizable solo conservando identidad, edad aparente, complexi?n y vestuario autorizado por el estado."
+    },
+    {
+      "asset_id": "char_miquel",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [],
+      "source_entities": [
+        "pnj:miquel"
+      ],
+      "function": "Ficha persistente de Miquel Sabater",
+      "reuse_policy": "Reutilizable solo conservando identidad, edad aparente, complexi?n y vestuario autorizado por el estado."
+    },
+    {
+      "asset_id": "char_fray_pere",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [],
+      "source_entities": [
+        "pnj:fray_pere"
+      ],
+      "function": "Ficha persistente de Fray Pere de Cardona",
+      "reuse_policy": "Reutilizable solo conservando identidad, edad aparente, complexi?n y vestuario autorizado por el estado."
+    },
+    {
+      "asset_id": "char_guillem",
+      "type": "character",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [],
+      "source_entities": [
+        "pnj:guillem"
+      ],
+      "function": "Ficha persistente de Guillem Miró",
+      "reuse_policy": "Reutilizable solo conservando identidad, edad aparente, complexi?n y vestuario autorizado por el estado."
+    },
+    {
+      "asset_id": "prop_tablilla_reparto",
+      "type": "prop",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [],
+      "source_entities": [
+        "recurso:inv_tablilla_reparto"
+      ],
+      "function": "Ficha consultable de la tablilla provisional del reparto sin revelar su contenido completo",
+      "reuse_policy": "Misma madera, borde roto, marcas no legibles y escala en todas las apariciones."
+    },
+    {
+      "asset_id": "prop_cuerda_apeo_marcada",
+      "type": "prop",
+      "priority": "essential",
+      "production_phase": "approved_reference",
+      "source_nodes": [
+        "n02_liberar_albert"
+      ],
+      "source_entities": [
+        "recurso:inv_cuerda_apeo_marcada"
+      ],
+      "function": "Hacer visible la alteraci?n de las medidas y permitir la consulta del recurso de apeo",
+      "reuse_policy": "Conservar el ritmo regular de nudos, los dos nudos desplazados y las dos marcas de hilo rojo en toda aparici?n."
+    },
+    {
+      "asset_id": "scene_barranco_olivares",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n03_barranco_olivares"
+      ],
+      "source_entities": [],
+      "function": "Orientar las rutas del barranco, muro, calera y paso de canteros antes de que cambie el terreno.",
+      "reuse_policy": "Reutilizable solo antes de derribar el muro o alterar f?sicamente sus accesos."
+    },
+    {
+      "asset_id": "scene_refugio_canteros",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n04_refugio_canteros"
+      ],
+      "source_entities": [],
+      "function": "Orientar una noche breve, el croquis de rutas y las tres salidas del refugio.",
+      "reuse_policy": "Reutilizable mientras no cambien f?sicamente la caseta, sus salidas o el croquis."
+    },
+    {
+      "asset_id": "scene_pozo_sant_lluc",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n04_pozo_sant_lluc"
+      ],
+      "source_entities": [],
+      "function": "Orientar el pozo, la mesa del reparto y la presencia p?blica an?nima.",
+      "reuse_policy": "Reutilizable para el estado base sin carreteros alertados, montura, ropa mojada ni cambios de cerco."
+    },
+    {
+      "asset_id": "scene_pozo_sant_lluc_carreteros_alertados",
+      "type": "scene_variant",
+      "priority": "essential",
+      "production_phase": "approved_variant",
+      "source_nodes": [
+        "n04_pozo_sant_lluc"
+      ],
+      "source_entities": [],
+      "function": "Hacer visible la llegada que convierte el pozo en noticia p?blica.",
+      "reuse_policy": "Solo cuando flag_carreteros_alertados est? activo; comparte encuadre y geograf?a con scene_pozo_sant_lluc."
+    },
+    {
+      "asset_id": "scene_hondonada_castillo",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n04_hondonada_castillo"
+      ],
+      "source_entities": [],
+      "function": "Orientar las herramientas, cu?a y canal de desag?e como evidencia f?sica parcial.",
+      "reuse_policy": "Reutilizable mientras no cambien cu?a, herramientas lavadas, desag?e o las marcas materiales."
+    },
+    {
+      "asset_id": "scene_acequia_corrales",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n04_encuentro_bernat"
+      ],
+      "source_entities": [],
+      "function": "Orientar bolsa, acequia, corrales y dos salidas estrechas de la negociaci?n.",
+      "reuse_policy": "Reutilizable mientras se mantengan abiertas ambas salidas y la bolsa permanezca sobre el pretil."
+    },
+    {
+      "asset_id": "scene_puerta_baja_castillo",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n02_custodia_aparente"
+      ],
+      "source_entities": [
+        "recurso:inv_eslabon_repuesto",
+        "recurso:inv_tablilla_reparto"
+      ],
+      "function": "Orientar custodia aparente, cadena alterada, tablilla y salida por la puerta baja.",
+      "reuse_policy": "Reutilizable mientras la puerta siga abierta y cadena y tablilla conserven su estado inicial."
+    },
+    {
+      "asset_id": "scene_camino_valencia",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n03_camino_valencia"
+      ],
+      "source_entities": [],
+      "function": "Orientar el control de carros, tablillas y acequia lateral como salida alternativa.",
+      "reuse_policy": "Reutilizable mientras el control no se rompa y el camino conserve su estado inicial."
+    },
+    {
+      "asset_id": "scene_desague_cisterna",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n03_desague_cisterna"
+      ],
+      "source_entities": [],
+      "function": "Orientar reja, rastro de brea, losa de canteros y salidas del canal.",
+      "reuse_policy": "Reutilizable mientras reja y losa permanezcan cerradas."
+    },
+    {
+      "asset_id": "scene_plaza_sant_lluc",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n05_reparto_congregado"
+      ],
+      "source_entities": [],
+      "function": "Orientar la audiencia p?blica, mesa disponible para una prueba y presi?n a?n contenida.",
+      "reuse_policy": "Reutilizable antes de que los guardias entren en la plaza o se deposite una prueba concreta."
+    },
+    {
+      "asset_id": "scene_corral_exterior",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_location",
+      "source_nodes": [
+        "n05_corral_bernat"
+      ],
+      "source_entities": [],
+      "function": "Orientar el pacto privado, bolsa sellada y salidas hacia Godall y el pozo.",
+      "reuse_policy": "Reutilizable mientras bolsa, pesebre y puertas mantengan el estado base."
+    },
+    {
+      "type": "scene",
+      "status": "approved",
+      "file": "scenes/noche_godall.webp",
+      "source_nodes": [
+        "n05_noche_godall"
+      ],
+      "notes": "Placa ambiental can?nica de la senda nocturna de Godall.",
+      "asset_id": "scene_noche_godall"
+    },
+    {
+      "type": "scene",
+      "status": "approved",
+      "file": "scenes/collado_godall.webp",
+      "source_nodes": [
+        "n06_collado_final"
+      ],
+      "notes": "Placa ambiental can?nica del collado final.",
+      "asset_id": "scene_collado_godall"
+    },
+    {
+      "type": "scene_variant",
+      "status": "approved",
+      "file": "scenes/plaza_sant_lluc_cerco_encima.webp",
+      "source_nodes": [
+        "n05_reparto_congregado"
+      ],
+      "notes": "Variante f?sica del cerco en la audiencia.",
+      "asset_id": "scene_plaza_sant_lluc_cerco_encima"
+    },
+    {
+      "asset_id": "scene_corral_tablilla_entregada",
+      "type": "scene_variant",
+      "priority": "essential",
+      "production_phase": "approved_variant",
+      "source_nodes": [
+        "n05_corral_bernat",
+        "n06_pacto_bernat"
+      ],
+      "source_entities": [],
+      "function": "variante_pacto_documental",
+      "reuse_policy": "Solo se muestra cuando su decisi?n de ruta est? activa."
+    },
+    {
+      "asset_id": "scene_final_albert_recapturado",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f01_albert_recapturado"],
+      "function": "final_recaptura_y_borrado_de_prueba",
+      "reuse_policy": "Final exclusivo por cambio material de la cadena."
+    },
+    {
+      "asset_id": "scene_final_bernat_impone_version",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f02_bernat_impone_version"],
+      "function": "final_reparto_impuesto",
+      "reuse_policy": "Final exclusivo por estacas clavadas y acta cerrada."
+    },
+    {
+      "asset_id": "scene_final_verdad_entera",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f03_verdad_entera"],
+      "function": "final_verdad_registrada",
+      "reuse_policy": "Final exclusivo por pruebas y acta separadas."
+    },
+    {
+      "asset_id": "scene_final_reparto_reabierto",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f04_reparto_reabierto"],
+      "function": "final_reparto_suspendido",
+      "reuse_policy": "Final exclusivo por estacas retiradas."
+    },
+    {
+      "asset_id": "scene_final_albert_bajo_juicio",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f05_albert_bajo_juicio"],
+      "function": "final_custodia_impugnada",
+      "reuse_policy": "Final exclusivo por nueva escolta y custodia."
+    },
+    {
+      "asset_id": "scene_final_limite_sant_lluc",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f06_albert_fuera_del_cerco"],
+      "function": "final_escape_del_cerco",
+      "reuse_policy": "Final exclusivo por salida del asentamiento."
+    },
+    {
+      "asset_id": "scene_final_regreso_testimonio",
+      "type": "scene",
+      "priority": "essential",
+      "production_phase": "approved_final",
+      "source_nodes": ["f09_regreso_con_testimonio"],
+      "function": "final_regreso_a_testimonio",
+      "reuse_policy": "Final exclusivo por retorno nocturno a la audiencia."
+    },
+    {
+      "asset_id": "scene_corral_sello_mostrado",
+      "type": "scene_variant",
+      "priority": "essential",
+      "production_phase": "approved_variant",
+      "source_nodes": [
+        "n05_corral_bernat",
+        "n06_pacto_bernat"
+      ],
+      "source_entities": [],
+      "function": "variante_acusacion_sello",
+      "reuse_policy": "Solo se muestra cuando su decisi?n de ruta est? activa."
+    }
+  ],
+  "coverage_targets": {
+    "pilot_required": [
+      "scene_calabozo_apertura",
+      "char_ramon",
+      "char_albert",
+      "char_sibila",
+      "char_bernat",
+      "char_miquel",
+      "char_fray_pere",
+      "char_guillem",
+      "prop_cadena_reparada",
+      "prop_fragmento_sello",
+      "prop_tablilla_reparto",
+      "scene_cisterna_investigacion",
+      "prop_cuerda_apeo_marcada",
+      "scene_casas_viejas_sibila",
+      "scene_barranco_olivares",
+      "scene_refugio_canteros",
+      "scene_pozo_sant_lluc",
+      "scene_pozo_sant_lluc_carreteros_alertados",
+      "scene_hondonada_castillo",
+      "scene_acequia_corrales",
+      "scene_puerta_baja_castillo",
+      "scene_camino_valencia",
+      "scene_desague_cisterna",
+      "scene_plaza_sant_lluc",
+      "scene_corral_exterior",
+      "scene_final_albert_recapturado",
+      "scene_final_bernat_impone_version",
+      "scene_final_verdad_entera",
+      "scene_final_reparto_reabierto",
+      "scene_final_albert_bajo_juicio",
+      "scene_final_limite_sant_lluc",
+      "scene_final_regreso_testimonio",
+      "scene_collado_godall"
+    ],
+    "pilot_extension": [],
+    "not_required_for_first_implementation": [
+      "cobertura completa de todos los nodos",
+      "imagen para cada final",
+      "variantes por cada flag",
+      "generacion automatica por API",
+      "audio, voz, musica o efectos"
+    ]
+  }
+}

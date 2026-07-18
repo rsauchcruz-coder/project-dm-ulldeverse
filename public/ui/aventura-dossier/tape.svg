@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="22" viewBox="0 0 72 22">
+  <filter id="n"><feTurbulence baseFrequency=".35" numOctaves="2" seed="5"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .14"/></feComponentTransfer></filter>
+  <path d="M2 3.5 69 1l1 17.5-67 2z" fill="#d7c399" fill-opacity=".72" stroke="#8b7758" stroke-opacity=".35"/>
+  <path d="M2 3.5 69 1l1 17.5-67 2z" filter="url(#n)" opacity=".35"/>
+</svg>

@@ -1,0 +1,19 @@
+node_modules/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+config.js
+
+# Runtime state
+Dades/
+saves_web/
+*.log
+
+# Local tooling
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+tmp/

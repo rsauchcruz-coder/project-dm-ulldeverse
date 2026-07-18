@@ -1,0 +1,41 @@
+{
+  "name": "project-dm-ulldeverse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project DM narrative world factory and its ULLDE:VERSE playable vertical slice.",
+  "main": "server_ui.js",
+  "scripts": {
+    "start": "node server_ui.js",
+    "test": "npm run qa:submission",
+    "qa:submission": "node scripts/qa/qa_submission.js",
+    "qa:world": "node scripts/qa/qa_world.js worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "qa:agency": "node scripts/qa/preflight_agencia.js --profile=aventura_corta_reactiva worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "qa:resources": "node scripts/qa/qa_economia_recursos.js --mode=gate worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "qa:causal": "node scripts/qa/qa_persistencia_causal.js --mode=gate worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "qa:runtime": "node scripts/qa/test_world_v1_runtime.js worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "qa:experience": "node scripts/qa/qa_experiencia_mundo.js fabrica/semillas/el_testigo_de_ulldecona_semilla_v1_2.json worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "qa:mobile": "node scripts/qa/qa_mobile_final_layout.js",
+    "qa:http": "node scripts/qa/smoke_world_http.js worlds/Aventura/aventura_el_testigo_de_ulldecona.json",
+    "media:compile": "node scripts/media/compile_visual_manifest.js aventura_el_testigo_de_ulldecona_001",
+    "media:qa": "node scripts/qa/qa_visual_manifest.js aventura_el_testigo_de_ulldecona_001",
+    "media:coverage": "node scripts/qa/qa_visual_coverage.js aventura_el_testigo_de_ulldecona_001",
+    "compile:world": "node scripts/compile/compile_world_v1.js fabrica/drafts/2026-07-13_testigo_ulldecona_world_v1.json worlds/Aventura/aventura_el_testigo_de_ulldecona.json aventura_el_testigo_de_ulldecona_001"
+  },
+  "keywords": [
+    "ai",
+    "narrative-game",
+    "interactive-fiction",
+    "world-generation",
+    "quality-assurance"
+  ],
+  "author": "Project DM",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "groq-sdk": "^1.2.1"
+  }
+}

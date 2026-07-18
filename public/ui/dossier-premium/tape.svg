@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 86">
+  <defs>
+    <linearGradient id="tape" x1="0" y1="0" x2="300" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8c49a" stop-opacity=".83"/>
+      <stop offset=".48" stop-color="#eee0ba" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#bca77e" stop-opacity=".85"/>
+    </linearGradient>
+    <filter id="grain" x="-10%" y="-20%" width="120%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="9" result="n"/>
+      <feColorMatrix in="n" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .16 0" result="g"/>
+      <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
+      <feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#2b1b0f" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <path d="m8 10 24 5L52 7l20 6 26-7 22 6 27-7 21 8 27-6 22 7 24-8 18 7 29-5-3 20 7 18-8 30-28-4-23 6-22-7-26 8-23-8-28 7-20-8-30 8-18-9-24 6-22-8-18 6 5-24-7-18Z" fill="url(#tape)" filter="url(#grain)"/>
+  <path d="M18 23c53 8 105-9 157-1 39 6 71-5 105-3" stroke="#fff7df" stroke-opacity=".28" stroke-width="2"/>
+</svg>

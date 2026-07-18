@@ -1,0 +1,13 @@
+{
+  "tipo_documento": "terminos_reconocibles",
+  "version": "1.0",
+  "nota": "Lista inicial, deliberadamente pequeña. Las coincidencias se bloquean solo en la semilla final, no en la conversación de inspiración.",
+  "terminos": [
+    { "termino": "Hogwarts", "categoria": "lugar" },
+    { "termino": "Jedi", "categoria": "terminologia" },
+    { "termino": "Sauron", "categoria": "personaje" },
+    { "termino": "Triforce", "categoria": "objeto" },
+    { "termino": "TARDIS", "categoria": "objeto" },
+    { "termino": "Arrakis", "categoria": "lugar" }
+  ]
+}

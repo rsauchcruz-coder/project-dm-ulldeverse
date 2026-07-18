@@ -1,0 +1,63 @@
+{
+  "entries": [
+    {
+      "asset_id": "char_ramon",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/arnau.webp",
+      "status": "approved"
+    },
+    {
+      "asset_id": "char_albert",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/mateu.webp",
+      "status": "approved"
+    },
+    {
+      "asset_id": "char_bernat",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/bernat.webp",
+      "status": "approved"
+    },
+    {
+      "asset_id": "char_sibila",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/sibila.webp",
+      "status": "approved"
+    },
+    {
+      "asset_id": "char_miquel",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/miquel.webp",
+      "status": "approved"
+    },
+    {
+      "asset_id": "char_fray_pere",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/fray_pere.webp",
+      "status": "approved"
+    },
+    {
+      "asset_id": "char_guillem",
+      "event": "generated_for_public_submission",
+      "notes": "Rostro y diseño completamente ficticios; no se utilizó ninguna fotografía personal como referencia.",
+      "provider": "openai_imagegen",
+      "source": "characters/guillem.webp",
+      "status": "approved"
+    }
+  ],
+  "schema_version": "visual_generation_log_v1",
+  "updated_at": "2026-07-18",
+  "world_id": "aventura_el_testigo_de_ulldecona_001"
+}
