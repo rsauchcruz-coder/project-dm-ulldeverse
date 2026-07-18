@@ -32,6 +32,7 @@ Run this checklist from a fresh checkout before publishing the submission.
 - [x] Create the public repository from this clean `main`.
 - [x] Publish a no-login public demo.
 - [x] Prepare final English Devpost copy and judge testing instructions.
+- [x] Prepare the 3:2 gallery thumbnail, three public-demo gallery images and public evidence PDF.
 - [ ] Record and upload the under-three-minute public YouTube video.
 - [ ] Add the primary `/feedback` Codex Session ID to Devpost.
 - [ ] Add the final YouTube URL and submission URL.

@@ -16,6 +16,18 @@ An AI-assisted factory for coherent, testable story worlds.
 
 Upload `docs/media/devpost-thumbnail.png`. It is a 1500 × 1000 PNG in Devpost's recommended 3:2 ratio and is under the 5 MB limit.
 
+**Gallery images, in this order**
+
+1. `docs/media/gallery/01-case-not-chat.png`
+2. `docs/media/gallery/02-visible-commitment.png`
+3. `docs/media/gallery/03-consequences-persist.png`
+
+Each image is a 1500 × 1000 public-safe composition captured from the deployed demo.
+
+**Optional evidence attachment**
+
+If the form offers a supporting-file field, upload `output/pdf/project-dm-build-week-evidence.pdf`. The four-page PDF is public-safe, under 4 MB and summarizes the judged experience, before/after scope, commit trail, Codex/GPT-5.6 evidence policy and executable QA. It supplements, but does not replace, the required YouTube video, repository URL or private `/feedback` Session ID.
+
 **Track**
 
 Apps for Your Life

@@ -85,6 +85,7 @@ The source trail for the submitted world is intentionally small:
 - [Contest readiness and before/after scope](docs/CONTEST_READINESS.md)
 - [Judge quickstart](docs/JUDGES_QUICKSTART.md)
 - [Devpost submission copy](docs/DEVPOST_SUBMISSION.md)
+- [Public evidence pack](output/pdf/project-dm-build-week-evidence.pdf)
 - [Visual assets and provenance](docs/ASSETS.md)
 - [Video and recorded-build plan](docs/DEMO_SCRIPT.md)
 - [Public release checklist](docs/RELEASE_CHECKLIST.md)
@@ -93,6 +94,8 @@ The source trail for the submitted world is intentionally small:
 ## Privacy and repository scope
 
 The submission repository excludes local saves, runtime logs, API configuration, private prompts, conversations, raw reference photography and unrelated prototype worlds. Generated runtime data is ignored through `.gitignore`.
+
+Public-facing submission media is available under `docs/media/`. It contains only the official project identity, verified metrics and screenshots captured from the no-login demo.
 
 ## License
 
