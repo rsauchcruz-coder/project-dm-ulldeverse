@@ -1160,3 +1160,175 @@ body[data-ui="dossier-premium"].prototype-autostart-failed .prototype-loader .st
   body[data-ui="dossier-premium"] *::before,
   body[data-ui="dossier-premium"] *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Ajuste de concurso: marca oficial, geometría centrada y decoración sobria. */
+body[data-ui="dossier-premium"] .home-card {
+  width: min(92%, 680px);
+  margin: clamp(20px, 5vh, 48px) auto;
+  padding: clamp(20px, 5vw, 38px);
+  border: 1px solid #9d7b4f;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 50% 0, #fffdf4 0, transparent 26rem),
+    repeating-linear-gradient(0deg, transparent 0 31px, #634b2f08 32px),
+    linear-gradient(110deg, #f2e5cb, #dfc9a4);
+  color: var(--dp-ink);
+  box-shadow: 0 24px 70px #000c, inset 0 1px #fff;
+}
+
+body[data-ui="dossier-premium"] .home-card .library-title {
+  margin: -3% 0 8px;
+  color: #241c15;
+  font: 700 clamp(1.55rem, 6vw, 2.25rem)/1.08 var(--dp-display);
+  text-align: center;
+}
+
+body[data-ui="dossier-premium"] .home-card .subtitle,
+body[data-ui="dossier-premium"] .home-card .small-note,
+body[data-ui="dossier-premium"] .home-card label {
+  color: #5f4b35;
+}
+
+body[data-ui="dossier-premium"] .home-card select {
+  border: 1px solid #806747;
+  background: #fff7e6;
+  color: #241c15;
+}
+
+body[data-ui="dossier-premium"] .home-card .secondary {
+  border: 1px solid #806747;
+  background: #e2cfaa;
+  color: #2d2219;
+}
+
+body[data-ui="dossier-premium"] .ulldeverse-logo {
+  display: block;
+  height: auto;
+  filter: url("#uv-remove-white");
+}
+
+body[data-ui="dossier-premium"] .ulldeverse-logo-home {
+  width: min(100%, 390px);
+  margin: clamp(-32px, -5vw, -12px) auto 0;
+}
+
+body[data-ui="dossier-premium"] .ulldeverse-logo-crop {
+  position: relative;
+  display: block;
+  width: clamp(112px, 35vw, 166px);
+  height: clamp(78px, 24.3vw, 115px);
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+body[data-ui="dossier-premium"] .ulldeverse-logo-header {
+  position: absolute;
+  inset: auto 0;
+  top: -11.2%;
+  width: 100%;
+}
+
+body[data-ui="dossier-premium"] .brandrow {
+  min-height: clamp(78px, 24.3vw, 115px);
+}
+
+body[data-ui="dossier-premium"] .content {
+  margin-inline: auto;
+  transform: none !important;
+}
+
+body[data-ui="dossier-premium"] .content > .section-card,
+body[data-ui="dossier-premium"] .archive,
+body[data-ui="dossier-premium"] .archive-tabs {
+  width: 100%;
+  margin-inline: auto;
+}
+
+body[data-ui="dossier-premium"] .archive-tabs {
+  padding-inline: 0;
+}
+
+body[data-ui="dossier-premium"] .paperclip,
+body[data-ui="dossier-premium"] .photo-clip,
+body[data-ui="dossier-premium"].theme-Aventura .characters > .char-card::before {
+  display: none !important;
+  content: none !important;
+  background-image: none !important;
+}
+
+body[data-ui="dossier-premium"] .kind-wrap {
+  padding-right: 13px;
+}
+
+body[data-ui="dossier-premium"] .choice small {
+  display: none !important;
+}
+
+body[data-ui="dossier-premium"] .detail-card {
+  padding: 10px;
+}
+
+body[data-ui="dossier-premium"] .detail-card .detail-actions {
+  margin-top: 0;
+}
+
+body[data-ui="dossier-premium"] .sheet-item.profile,
+body[data-ui="dossier-premium"] .character-profile-card {
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: start;
+}
+
+body[data-ui="dossier-premium"] .sheet-item.profile img,
+body[data-ui="dossier-premium"] .character-profile-card img {
+  width: 96px;
+  height: 144px;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+body[data-ui="dossier-premium"] .character-directory {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+body[data-ui="dossier-premium"] .character-profile-card {
+  display: grid;
+  gap: 12px;
+  padding: 10px;
+}
+
+body[data-ui="dossier-premium"] .character-profile-card p {
+  margin: 6px 0 0;
+}
+
+body[data-ui="dossier-premium"] .drawer-system #restartBtn {
+  background: #4c3a28;
+  color: #f2dfbd;
+}
+
+body[data-ui="dossier-premium"] .drawer-system #exitBtn {
+  background: #64382f;
+}
+
+@media (max-width: 430px) {
+  body[data-ui="dossier-premium"] .ulldeverse-logo-crop {
+    width: 118px;
+    height: 82px;
+  }
+
+  body[data-ui="dossier-premium"] .brandrow {
+    min-height: 82px;
+  }
+
+  body[data-ui="dossier-premium"] .sheet-item.profile,
+  body[data-ui="dossier-premium"] .character-profile-card {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+
+  body[data-ui="dossier-premium"] .sheet-item.profile img,
+  body[data-ui="dossier-premium"] .character-profile-card img {
+    width: 82px;
+    height: 123px;
+  }
+}

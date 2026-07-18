@@ -196,7 +196,7 @@
     },
     {
       "id": "sibila",
-      "nombre_visible": "Sibila Ferré",
+      "nombre_visible": "Sibila Rius",
       "papel_visible": "Hermana de Mateu, ocupada en desmontar la casa familiar del castillo viejo",
       "quiere": "Proteger a su familia y conservar una prueba del terreno que les corresponde",
       "teme": "Que la huida de Mateu convierta su casa y sus hijos en moneda de castigo"
@@ -304,7 +304,7 @@
             "n02_liberar_albert"
           ],
           "anclas": [
-            "Sibila Ferré",
+            "Sibila Rius",
             "hermana"
           ]
         },
@@ -788,7 +788,7 @@
         "Escalera al patio",
         "Lámpara de guardia"
       ],
-      "texto_base": "El castillo de Ulldecona se vacía incluso de noche. En el patio, los hombres que preparan el traslado al valle apilan tejas, numeran vigas y arrancan de los muros la piedra que servirá para levantar Sant Lluc. Cada golpe llega al calabozo por el techo y desprende un poco de cal sobre la mesa donde Arnau Cervera debería limitarse a copiar una entrega de custodia.\n\nEn Sant Lluc, Fray Pere de Cardona recibe las reclamaciones de las familias antes de que las nuevas estacas entren en tierra. Sibila Ferré, hermana de Mateu, desmonta mientras tanto la casa familiar del castillo para salvar lo que aún pueda llevarse al valle.\n\nLa tablilla no lleva firma. Bernat Llorca ha dejado su nombre en blanco y una llave junto al punzón, como si bastara con que el escribano sacara al preso al amanecer y aceptara después la versión correcta de la noche.\n\nMateu Rius espera de pie para que la cadena no arrastre. Tiene polvo seco en una rodilla y una herida abierta en el nudillo. Lo acusan de haber empujado a Guillem Miró, oficial del reparto, dentro de la cisterna. Mateu no niega la pelea. Niega el final.\n\n\"Cayó por mi mano\", dice cuando Arnau vuelve a leer la tablilla sin firma. \"Pero gritaba cuando me sacaron de allí. Luego alguien abrió esta cadena y volvió a cerrarla.\"\n\nLevanta el tobillo. Uno de los eslabones está limpio, con un remache reciente y aceite oscuro en la junta. Los demás llevan años de óxido. Arnau ha copiado suficientes inventarios para reconocer una reparación hecha con prisa, pero no para saber quién la ordenó.\n\nArriba, Bernat manda registrar primero las casas que aún conservan techo. Busca una pieza del archivo de Guillem y a cualquiera que haya hablado con Mateu. Las lanzas golpean una puerta, luego otra. En el corredor, un guardia anuncia que la puerta baja quedará cerrada cuando termine la ronda.\n\nMateu mira la llave, no a Arnau. \"Puedes sacarme como preso, como hombre libre o como mentiroso. Pero si esperas a que Bernat firme, ya habrá decidido por los dos.\"",
+      "texto_base": "El castillo de Ulldecona se vacía incluso de noche. En el patio, los hombres que preparan el traslado al valle apilan tejas, numeran vigas y arrancan de los muros la piedra que servirá para levantar Sant Lluc. Cada golpe llega al calabozo por el techo y desprende un poco de cal sobre la mesa donde Arnau Cervera debería limitarse a copiar una entrega de custodia.\n\nEn Sant Lluc, Fray Pere de Cardona recibe las reclamaciones de las familias antes de que las nuevas estacas entren en tierra. Sibila Rius, hermana de Mateu, desmonta mientras tanto la casa familiar del castillo para salvar lo que aún pueda llevarse al valle.\n\nLa tablilla no lleva firma. Bernat Llorca ha dejado su nombre en blanco y una llave junto al punzón, como si bastara con que el escribano sacara al preso al amanecer y aceptara después la versión correcta de la noche.\n\nMateu Rius espera de pie para que la cadena no arrastre. Tiene polvo seco en una rodilla y una herida abierta en el nudillo. Lo acusan de haber empujado a Guillem Miró, oficial del reparto, dentro de la cisterna. Mateu no niega la pelea. Niega el final.\n\n\"Cayó por mi mano\", dice cuando Arnau vuelve a leer la tablilla sin firma. \"Pero gritaba cuando me sacaron de allí. Luego alguien abrió esta cadena y volvió a cerrarla.\"\n\nLevanta el tobillo. Uno de los eslabones está limpio, con un remache reciente y aceite oscuro en la junta. Los demás llevan años de óxido. Arnau ha copiado suficientes inventarios para reconocer una reparación hecha con prisa, pero no para saber quién la ordenó.\n\nArriba, Bernat manda registrar primero las casas que aún conservan techo. Busca una pieza del archivo de Guillem y a cualquiera que haya hablado con Mateu. Las lanzas golpean una puerta, luego otra. En el corredor, un guardia anuncia que la puerta baja quedará cerrada cuando termine la ronda.\n\nMateu mira la llave, no a Arnau. \"Puedes sacarme como preso, como hombre libre o como mentiroso. Pero si esperas a que Bernat firme, ya habrá decidido por los dos.\"",
       "opciones": [
         {
           "id": "o01_liberar_albert",
@@ -875,7 +875,7 @@
       "continuidad_desde_decision_anterior": "Mateu llega libre y Sibila comprende que Arnau ha elegido creerle.",
       "personajes_visibles": [
         "Mateu Rius",
-        "Sibila Ferré"
+        "Sibila Rius"
       ],
       "entorno_visible": [
         "Cuerda de apeo",

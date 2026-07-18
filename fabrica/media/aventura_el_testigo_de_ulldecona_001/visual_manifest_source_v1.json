@@ -198,13 +198,13 @@
       "source_nodes": [
         "n02_liberar_albert"
       ],
-      "source_signature": "sha256:9dc69402127a5c6a13c0f6e54064a50dac26c13ffca1244f7bdc5cd496a3fde2",
+      "source_signature": "sha256:a1fa917d0f0f3d29bd749594532460853025f560906054699e19027d93cbe0f6",
       "status": "approved",
       "style_version": 1,
       "type": "scene"
     },
     {
-      "alt": "Sibila Ferré, hermana de Mateu y trabajadora de las casas en desmontaje",
+      "alt": "Sibila Rius, hermana de Mateu y trabajadora de las casas en desmontaje",
       "approved_file": "characters/sibila.webp",
       "asset_id": "char_sibila",
       "function": "referencia_persistente_personaje",
@@ -223,7 +223,7 @@
       "source_nodes": [
         "n02_liberar_albert"
       ],
-      "source_signature": "sha256:a31a438f8bba1f5f6a73978f1f203247850f1e11c82a9b894e3de25f07b4427c",
+      "source_signature": "sha256:a76ffde67740c462c1a1e0e514034cc16beba55a108e56abbbf19dca7602117b",
       "status": "approved",
       "style_version": 1,
       "type": "character"
