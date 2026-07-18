@@ -2,6 +2,19 @@
 
 AI was used as a production collaborator, not as an unchecked runtime authority.
 
+## Build Week use of Codex and GPT-5.6
+
+The core Build Week extension was developed in Codex with GPT-5.6. The primary Director 2 session covered implementation, interface and product decisions, privacy hardening, automated verification and public deployment. GPT-5.6 was used inside that collaborative build workflow; it is not presented as a hidden runtime dependency.
+
+Concrete Build Week contributions included:
+
+- defining the Project DM / ULLDE:VERSE / El testigo de Ulldecona identity;
+- redesigning and testing the mobile dossier interaction;
+- replacing identity-bearing content with fictional names and portraits;
+- turning the canonical world into a no-login browser demo;
+- auditing repository scope, configuration and credentials;
+- adding deployment packaging and executable release checks.
+
 ## Where AI contributed
 
 - Turning human product intent into a structured experience seed.

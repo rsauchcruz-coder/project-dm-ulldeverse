@@ -1,90 +1,122 @@
-# Video and recorded-build plan
+# Submission video and optional recorded-build runbook
 
-## Three-minute submission video
+## Official video: target duration 2:45
 
-### 0:00–0:20 — The problem
+The official video must be public on YouTube, under three minutes, narrated in English and free of unlicensed music or third-party material. Record at 1080p, enlarge the browser to keep text legible and use the public demo rather than localhost.
 
-“Generative narrative demos can improvise, but they are difficult to reproduce, test and scale. Project DM turns a narrative world into a compiled and verifiable product.”
+### Shot list and exact narration
 
-Show the Project DM name and the ULLDE:VERSE home screen.
+#### 0:00–0:15 — Product promise
 
-### 0:20–1:25 — Play
+**Screen:** ULLDE:VERSE title, then open the public demo.
 
-Start **El testigo de Ulldecona** in **Corto guiado**.
+**Voiceover:**
 
-Show:
+> Generative stories can be imaginative, but they are hard to reproduce, test and ship. Project DM is an AI-assisted factory for small, coherent narrative worlds. ULLDE:VERSE is its first complete player experience.
 
-- the dossier presentation;
-- scene and character assets;
-- one resource or deduction;
-- a decision with an explicit consequence;
-- the route/archive changing after the action.
+#### 0:15–1:08 — Working product
 
-Do not attempt a complete playthrough in the video.
+**Screen:** Start *El testigo de Ulldecona*. Show the initial dossier, a character card and a scene. Select one decision so its highlighted state is visible, execute it, then open the route/archive and show that the case state changed.
 
-### 1:25–2:15 — The factory
+**Voiceover:**
 
-Show, in this order:
+> This is a short historical investigation designed for a phone and for players who do not need to know role-playing games. I read the case, choose a concrete action and immediately see its consequences. The route, known characters, evidence, resources and pressure are derived from the same canonical state. This public guided demo needs no account, API key or runtime model call, so every judge receives a stable experience.
 
-1. Experience seed.
-2. World source with nodes and actions.
-3. Compiler command.
-4. `npm test`.
-5. Final summary showing routes, endings and visual coverage.
+#### 1:08–1:46 — Factory and verification
 
-### 2:15–2:45 — AI and control
+**Screen:** Fast, readable cuts of the experience seed, authored world JSON, compiled world, visual manifest and final `npm test` summary. Keep each filename visible.
 
-Explain that AI assists seed development, architecture, prose, implementation and visuals, while deterministic contracts verify state, resources, causality, endings and presentation.
+**Voiceover:**
 
-Mention that the submitted guided world runs without an API.
+> Behind the dossier, Project DM separates human intent, world architecture, prose, compilation, visuals and quality gates. This world has twenty-eight nodes, eighty-eight actions and nine reachable endings. Automated exploration verifies one thousand one hundred and forty-three valid routes, while separate gates reject fake choices, impossible resource use, broken causal promises, unreachable endings, mobile regressions and incomplete visual bindings.
 
-### 2:45–3:00 — Closing
+#### 1:46–2:28 — Codex and GPT-5.6
 
-“ULLDE:VERSE is one world. Project DM is the factory that can build the next one.”
+**Screen:** Show the Director 2 Codex capture with task title, visible GPT-5.6 model and the relevant implementation result. Then show the Build Week commits and one concise diff or the public-demo QA file. Do not show private messages, tokens, paths containing personal information or browser credentials.
 
-## Recorded mini-world build
+**Voiceover:**
 
-Recommended length: **two hours**, with an optional thirty-minute QA buffer.
+> During Build Week, I used Codex with GPT-5.6 as my engineering and product collaborator. Starting from a private experimental engine, we made the extension submission-ready: we chose the product identity, redesigned the mobile interaction, fictionalized identity-bearing content, built the deterministic browser runtime and deployment package, audited the public repository and turned repeated failures into executable tests. GPT-5.6 helped reason across narrative, code, design and release decisions; deterministic tests, not the model, decide whether the artifact ships.
 
-### Before recording
+#### 2:28–2:45 — Close
 
-- Start from a clean branch.
-- Verify `npm install` and `npm test`.
-- Prepare only the human premise; do not prebuild the world.
-- Keep the clock and full desktop visible.
-- Do not cut failures. They are evidence of the QA loop.
+**Screen:** Return to the live dossier, then end on the logo plus the public demo and repository URLs.
+
+**Voiceover:**
+
+> El testigo de Ulldecona is one finished world. Project DM is the factory for making the next one coherent, playable and verifiable. Try ULLDE:VERSE in the public demo.
+
+### Recording checklist
+
+- Use English narration or add a complete English translation.
+- Keep the final export at 2:45–2:55; never exceed 3:00.
+- Show the working project before showing code.
+- Say both “Codex” and “GPT-5.6” and describe concrete contributions.
+- Show the selected choice changing visually before executing it.
+- Do not show secrets, temporary deployment credentials, personal photographs or private chats.
+- Upload to YouTube as **Public**, not Unlisted.
+- Suggested title: `Project DM / ULLDE:VERSE — OpenAI Build Week`
+- Suggested description: `Project DM is an AI-assisted factory for coherent, testable narrative worlds. Play the public ULLDE:VERSE demo and inspect the reproducible repository using the links below.`
+
+## Optional continuous mini-world proof
+
+This recording is supporting evidence, not the official submission video. Do it only after the official video and Devpost draft are safe.
+
+### Scope
+
+- Target: 2 hours.
+- Hard stop: 2 hours 30 minutes, including correction buffer.
+- Output: one new 5–8-node mini-world, at least 3 endings and one verified HTTP route.
+- Presentation: placeholders are acceptable; do not try to create a full visual pack live.
+- Premise to reveal at recording start: **A lighthouse keeper must decide which warning to transmit before a storm cuts the last cable.**
+
+### Preflight — performed on camera
+
+1. Show the system clock and the clean repository status.
+2. Create a new branch named `proof/mini-world-YYYYMMDD`.
+3. Run `npm ci` and `npm test`.
+4. Show that only the one-sentence premise exists; no world files are prebuilt.
+5. Confirm that no `.env` or secret value is visible.
 
 ### 0:00–0:15 — Human intent
 
-Answer the experience questions and create a new seed. Confirm the experience signature before generating architecture.
+- Answer the Pregenerator questions.
+- Create and validate a version 1.2 experience seed.
+- Confirm audience, central relationship, dominant tension and the intended emotional aftertaste.
 
-### 0:15–0:45 — Structural skeleton
+### 0:15–0:45 — Architecture
 
-Create:
-
-- 5–8 nodes;
-- 2–3 resources;
-- 2 deductions;
-- 3 endings;
-- causal promises;
-- one irreversible choice.
-
-Run agency, resource and causal preflight before writing final prose.
+- Create 5–8 nodes, 2–3 resources, 2 deductions and 3 concrete endings.
+- Include one irreversible choice and one later consequence that remembers it.
+- Declare causal promises and ending requirements.
+- Run agency, resource and causal preflight before final prose.
 
 ### 0:45–1:20 — Playable content
 
-Write concise visible Spanish for each node without changing the approved topology. Compile the world and correct schema errors.
+- Write concise, correct visible Spanish without changing the approved topology.
+- Compile to the canonical world format.
+- Correct schema and contract failures as they appear; explain what each failed gate protected.
 
-### 1:20–1:45 — Runtime and presentation
+### 1:20–1:45 — Runtime
 
-Add the world to the runtime, declare the initial dossier presentation and verify the guided route over HTTP.
-
-For a two-hour proof, use placeholders or a minimal generated visual set. The factory logic matters more than producing dozens of polished images live.
+- Register the world in the guided runtime.
+- Add the initial dossier presentation, short location labels and valid consultation focuses.
+- Run one HTTP route to an ending, then demonstrate a materially different ending.
 
 ### 1:45–2:00 — Release gate
 
-Run the complete relevant QA, play one path and show one alternate ending. Finish by displaying the clean diff and the generated artifact.
+- Run the complete relevant QA suite.
+- Show the generated artifact, the clean diff and a concise commit.
+- End with a table of nodes, actions, endings, valid routes and elapsed time.
 
-### Optional 2:00–2:30 — Correction buffer
+### 2:00–2:30 — Correction buffer only
 
-Use this only for failures discovered by QA. Explain what the failed gate protected and rerun it after the correction.
+Use this time only for failures discovered by QA. Do not add scope or polish. If the build cannot pass by 2:30, stop honestly and preserve the failed gate as evidence.
+
+### Integrity rules
+
+- Continuous desktop recording with a visible clock; cuts only for accidental secret exposure.
+- Keep failures and corrections.
+- Do not paste a prepared world or bulk hidden content.
+- Codex may create code and artifacts, but the human must confirm experience and product decisions.
+- Publish the proof separately and link it only as optional supporting evidence.

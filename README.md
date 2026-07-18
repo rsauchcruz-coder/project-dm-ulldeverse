@@ -6,6 +6,10 @@ The submission is not just a chatbot or a scripted demo. It separates creative i
 
 ## Try the vertical slice
 
+**[Play the public ULLDE:VERSE demo](https://project-dm-ulldeverse.rsauchcruz.chatgpt.site)**
+
+The public demo is a guided, per-browser experience. It stores only local play state, needs no account or API key and makes no model calls. For technical evaluation, the same canonical world can also be run with the local Node.js server:
+
 Requirements:
 
 - Node.js 20 or newer.
@@ -43,6 +47,7 @@ npm test
 - **Project DM** is the factory and technical system.
 - **ULLDE:VERSE** is the player-facing experience.
 - **El testigo de Ulldecona** is the submitted playable world.
+- **OpenAI Build Week track:** Apps for Your Life — creativity and interactive entertainment for people who do not need prior role-playing experience.
 
 Ulldecona and its historical setting are real. All named characters and published character portraits in this repository are fictional.
 
@@ -77,6 +82,7 @@ The source trail for the submitted world is intentionally small:
 - [Architecture](docs/ARCHITECTURE.md)
 - [AI use and human control](docs/AI_USAGE.md)
 - [Build Week evidence](docs/BUILD_WEEK_EVIDENCE.md)
+- [Contest readiness and before/after scope](docs/CONTEST_READINESS.md)
 - [Visual assets and provenance](docs/ASSETS.md)
 - [Video and recorded-build plan](docs/DEMO_SCRIPT.md)
 - [Public release checklist](docs/RELEASE_CHECKLIST.md)
