@@ -83,6 +83,8 @@ The source trail for the submitted world is intentionally small:
 - [AI use and human control](docs/AI_USAGE.md)
 - [Build Week evidence](docs/BUILD_WEEK_EVIDENCE.md)
 - [Contest readiness and before/after scope](docs/CONTEST_READINESS.md)
+- [Judge quickstart](docs/JUDGES_QUICKSTART.md)
+- [Devpost submission copy](docs/DEVPOST_SUBMISSION.md)
 - [Visual assets and provenance](docs/ASSETS.md)
 - [Video and recorded-build plan](docs/DEMO_SCRIPT.md)
 - [Public release checklist](docs/RELEASE_CHECKLIST.md)
