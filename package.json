@@ -6,7 +6,7 @@
   "main": "server_ui.js",
   "scripts": {
     "start": "node server_ui.js",
-    "build": "next build",
+    "build": "node scripts/build_site.js",
     "test": "npm run qa:submission",
     "qa:repo": "node scripts/qa/qa_repository_hygiene.js",
     "qa:submission": "node scripts/qa/qa_submission.js",
@@ -39,12 +39,6 @@
   },
   "dependencies": {
     "express": "^5.2.1",
-    "groq-sdk": "^1.2.1",
-    "next": "16.2.10",
-    "react": "19.2.7",
-    "react-dom": "19.2.7"
-  },
-  "overrides": {
-    "postcss": "8.5.10"
+    "groq-sdk": "^1.2.1"
   }
 }
