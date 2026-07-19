@@ -385,6 +385,14 @@
       }
     },
     "n02_custodia_aparente": {
+      "foco_cadena_reparada": {
+        "x": 0.5,
+        "y": 0.76
+      },
+      "foco_puerta_baja": {
+        "x": 0.7,
+        "y": 0.42
+      },
       "foco_tablilla_provisional": {
         "x": 0.38,
         "y": 0.62
@@ -397,6 +405,14 @@
       }
     },
     "n02_regreso_cisterna": {
+      "foco_canal_desague": {
+        "x": 0.72,
+        "y": 0.48
+      },
+      "foco_fragmento_sello": {
+        "x": 0.53,
+        "y": 0.62
+      },
       "foco_tapa_cisterna": {
         "x": 0.37,
         "y": 0.6
@@ -457,9 +473,29 @@
       }
     },
     "n05_reparto_congregado": {
+      "foco_cuerda_audiencia": {
+        "x": 0.36,
+        "y": 0.59
+      },
+      "foco_eslabon_audiencia": {
+        "x": 0.64,
+        "y": 0.58
+      },
       "foco_mesa_provisional": {
         "x": 0.5,
         "y": 0.53
+      },
+      "foco_pozo_nuevo": {
+        "x": 0.72,
+        "y": 0.43
+      },
+      "foco_sello_audiencia": {
+        "x": 0.56,
+        "y": 0.58
+      },
+      "foco_tablilla_audiencia": {
+        "x": 0.45,
+        "y": 0.58
       }
     },
     "n06_audiencia_fraude": {

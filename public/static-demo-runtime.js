@@ -179,6 +179,19 @@
     return focus?.entity_id || FOCUS_ENTITY_IDS[focus?.id] || null;
   }
 
+  function sceneFocuses(entity) {
+    const declared = [
+      ...(entity?.focos_consulta || []),
+      ...(entity?.focos_consulta_extra || []),
+    ];
+    const seen = new Set();
+    return declared.filter((focus) => {
+      if (!focus || !focus.id || !eligible(focus) || seen.has(focus.id)) return false;
+      seen.add(focus.id);
+      return true;
+    });
+  }
+
   function objectiveItems(entity, world) {
     const premise = world.premisa || {};
     const general = premise.pregunta_dramatica || premise.promesa_jugable || "Resolver el expediente.";
@@ -202,7 +215,7 @@
         ? "Mateu mantiene una actitud hostil"
         : "Relación con Mateu en observación";
     return {
-      interactuable: (entity.focos_consulta || []).map((focus) => ({
+      interactuable: sceneFocuses(entity).map((focus) => ({
         id: focusEntityId(focus) || focus.id,
         item: focus.etiqueta,
         descripcion: focus.descripcion || "",
@@ -249,7 +262,7 @@
           }
         : { id: null, name, role_short: "Presente", description: "" };
     })].filter(Boolean);
-    const focusPoints = (entity.focos_consulta || []).map((focus) => ({
+    const focusPoints = sceneFocuses(entity).map((focus) => ({
       id: focus.id,
       label: focus.etiqueta,
       description: focus.descripcion || "",
@@ -276,6 +289,7 @@
       ruta_reciente_estructurada: structuredRoute,
       personajes_escena: visibleCharacters,
       focos_consulta: focusPoints,
+      novedades_caso: state.pendingNews || [],
       ui_state: {
         pressure: {
           name: "Cerco del castillo",
@@ -310,10 +324,40 @@
     };
   }
 
+  function newsForAction(option, previousEntity, nextEntity, world) {
+    const changes = option.cambios_estado || {};
+    const news = [];
+    const previousPeople = new Set(previousEntity?.personajes_visibles || []);
+    const nextPeople = (nextEntity?.personajes_visibles || []).filter((name) => !previousPeople.has(name));
+    const resource = (id) => (world.recursos || []).find((item) => item.id === id);
+    const clue = (id) => (world.pistas || []).find((item) => item.id === id);
+
+    if (nextEntity?.ubicacion_corta) news.push({
+      id: `ruta:${nextEntity.id}`,
+      categoria: "ruta",
+      titulo: `Nueva situacion: ${nextEntity.ubicacion_corta}`,
+      texto: nextEntity.situacion_visible || "La investigacion cambia de escenario.",
+    });
+    (changes.inventario_agregar || []).forEach((id) => {
+      const item = resource(id);
+      news.push({ id: `inventario:${id}`, categoria: "inventario", titulo: `Prueba incorporada: ${item?.nombre_visible || id}`, texto: item?.funcion || "La prueba queda registrada en el expediente." });
+    });
+    (changes.pistas_agregar || []).forEach((id) => {
+      const item = clue(id);
+      news.push({ id: `deduccion:${id}`, categoria: "deduccion", titulo: `Deduccion actualizada: ${item?.nombre_visible || id}`, texto: item?.funcion || "La nueva informacion cambia la lectura del caso." });
+    });
+    nextPeople.forEach((name) => {
+      const person = (world.pnj || []).find((item) => item.nombre_visible === name);
+      news.push({ id: `personaje:${person?.id || name}`, categoria: "personaje", titulo: `Personaje presente: ${name}`, texto: person?.quiere || "Su papel puede alterar el curso de la investigacion." });
+    });
+    return news;
+  }
+
   function chooseOption(world, actionText) {
     const entity = world.nodos.find((node) => node.id === state.nodeId);
     if (!entity) return { error: "El expediente ya está cerrado." };
-    const option = (entity.opciones || [])
+    const previousEntity = applyVariants(entity);
+    const option = (previousEntity.opciones || [])
       .filter(eligible)
       .find((candidate) => normalise(candidate.texto) === normalise(actionText));
     if (!option) return { error: "Esa opción no está disponible en el estado actual." };
@@ -324,6 +368,7 @@
     state.recentActions.push(option.texto);
     const destination = currentEntity(world);
     state.route.push(destination?.ubicacion_corta || destination?.ubicacion || "Desenlace");
+    state.pendingNews = newsForAction(option, previousEntity, applyVariants(destination), world);
     persistState();
     return buildResponse(world);
   }

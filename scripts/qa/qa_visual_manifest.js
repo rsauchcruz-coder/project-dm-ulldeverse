@@ -40,6 +40,7 @@ function environmentFocusId(value) {
 
 function hasFoco(node, focoId) {
   if ((node?.focos_consulta || []).some((foco) => (typeof foco === "string" ? foco : foco?.id) === focoId)) return true;
+  if ((node?.focos_consulta_extra || []).some((foco) => (typeof foco === "string" ? foco : foco?.id) === focoId)) return true;
   return (node?.entorno_visible || []).some((item) => environmentFocusId(typeof item === "string" ? item : item?.etiqueta || item?.nombre || item?.item) === focoId);
 }
 

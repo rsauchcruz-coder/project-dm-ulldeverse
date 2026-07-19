@@ -971,6 +971,18 @@
           "etiqueta": "Tablilla provisional",
           "tipo": "documento",
           "descripcion": "La custodia depende de un documento que todavía no tiene firma."
+        },
+        {
+          "id": "foco_cadena_reparada",
+          "etiqueta": "Cadena de Mateu",
+          "tipo": "prueba",
+          "descripcion": "La cadena de Mateu tiene un remache nuevo que no coincide con el hierro antiguo."
+        },
+        {
+          "id": "foco_puerta_baja",
+          "etiqueta": "Puerta baja",
+          "tipo": "lugar",
+          "descripcion": "La salida parece rutinaria, pero una sola pregunta puede convertir a Arnau en segundo preso."
         }
       ],
       "fase": "puerta_castillo",
@@ -1088,6 +1100,18 @@
           "etiqueta": "Tapa de la cisterna",
           "tipo": "pista",
           "descripcion": "Aceite y brea recientes cubren un hierro mucho más viejo."
+        },
+        {
+          "id": "foco_fragmento_sello",
+          "etiqueta": "Fragmento del sello",
+          "tipo": "prueba",
+          "descripcion": "La pieza queda atrapada en la brea del cierre y puede ligar la cisterna con el registro de Bernat."
+        },
+        {
+          "id": "foco_canal_desague",
+          "etiqueta": "Canal de desague",
+          "tipo": "lugar",
+          "descripcion": "El desague conserva la ruta por la que alguien pudo intentar salir desde el interior."
         }
       ],
       "fase": "cisterna",
@@ -2117,6 +2141,46 @@
           "etiqueta": "Mesa provisional",
           "tipo": "documento",
           "descripcion": "Una prueba depositada aquí deja de pertenecer a la sombra."
+        },
+        {
+          "id": "foco_pozo_nuevo",
+          "etiqueta": "Pozo nuevo",
+          "tipo": "lugar",
+          "descripcion": "El pozo nuevo reúne a las familias: la audiencia ya no puede volver a la sombra."
+        }
+      ],
+      "focos_consulta_extra": [
+        {
+          "id": "foco_cuerda_audiencia",
+          "entity_id": "recurso:inv_cuerda_apeo_marcada",
+          "etiqueta": "Cuerda de apeo marcada",
+          "tipo": "prueba",
+          "descripcion": "La cuerda conserva las marcas que permiten reconstruir las medidas del reparto.",
+          "requisitos": ["inv_cuerda_apeo_marcada"]
+        },
+        {
+          "id": "foco_tablilla_audiencia",
+          "entity_id": "recurso:inv_tablilla_reparto",
+          "etiqueta": "Tablilla provisional",
+          "tipo": "prueba",
+          "descripcion": "Los nombres raspados pueden hacerse publicos sobre la mesa de la audiencia.",
+          "requisitos": ["inv_tablilla_reparto"]
+        },
+        {
+          "id": "foco_sello_audiencia",
+          "entity_id": "recurso:inv_fragmento_sello_registro",
+          "etiqueta": "Fragmento del sello",
+          "tipo": "prueba",
+          "descripcion": "El fragmento permite conectar el cierre de la cisterna con el registro de Bernat.",
+          "requisitos": ["inv_fragmento_sello_registro"]
+        },
+        {
+          "id": "foco_eslabon_audiencia",
+          "entity_id": "recurso:inv_eslabon_repuesto",
+          "etiqueta": "Eslabon sustituido",
+          "tipo": "prueba",
+          "descripcion": "El metal nuevo contradice la version de una custodia sin interrupciones.",
+          "requisitos": ["inv_eslabon_repuesto"]
         }
       ],
       "fase": "preclimax_publico",

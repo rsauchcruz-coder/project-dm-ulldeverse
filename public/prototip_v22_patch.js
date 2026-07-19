@@ -371,8 +371,16 @@
       sceneImage.style.cursor = visual?.src ? "zoom-in" : "default";
       document.getElementById("photoPlaceholder").textContent = clean(current.ubicacio || "Localización sin imagen");
 
-      const focuses = list(current?.focos_consulta || current?.ui_state?.focus_points).slice(0, 3);
-      document.querySelectorAll(".hotspot").forEach((button, index) => {
+      const focuses = list(current?.focos_consulta || current?.ui_state?.focus_points);
+      const hotspots = [...wrap.querySelectorAll(".hotspot")];
+      while (hotspots.length < focuses.length) {
+        const button = document.createElement("button");
+        button.className = "hotspot";
+        button.type = "button";
+        wrap.appendChild(button);
+        hotspots.push(button);
+      }
+      hotspots.forEach((button, index) => {
         const focus = focuses[index];
         const declared = visualManifest?.hotspots?.[current.node_id]?.[focus?.id];
         const hasCanonicalPosition = declared && Number.isFinite(Number(declared.x)) && Number.isFinite(Number(declared.y));

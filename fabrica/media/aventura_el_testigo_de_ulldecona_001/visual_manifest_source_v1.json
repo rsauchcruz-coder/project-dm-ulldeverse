@@ -60,7 +60,7 @@
       "source_nodes": [
         "n02_regreso_cisterna"
       ],
-      "source_signature": "sha256:807df8e618d3c621d873a1f027b4ec3adc43162a0f1f544ce5d01a6198f313e1",
+      "source_signature": "sha256:96ebd2fc86179cacc73887b260defd6414a42de1cc100160eaa45ea7727e4a01",
       "status": "approved",
       "style_version": 1,
       "type": "scene"
@@ -166,7 +166,7 @@
       "source_nodes": [
         "n02_regreso_cisterna"
       ],
-      "source_signature": "sha256:e01b1c11cc0ac3d15d7b18b08c04da4a1d49ff40e47e3ce2cadfda62c5dd077c",
+      "source_signature": "sha256:de81a53dd93017f9504025d6d001055a08b448af0aab067b328721b47d47447e",
       "status": "approved",
       "style_version": 1,
       "type": "prop"
@@ -583,7 +583,7 @@
       "source_nodes": [
         "n02_custodia_aparente"
       ],
-      "source_signature": "sha256:c9896b26ef384fb8eeb0227580fcaa8e4a7f56332cc3a8b734690b206e5a713b",
+      "source_signature": "sha256:b7fe299b51f3aa4269b15b04e943249f8f7d597bfa7c22ff60b8a09359b5cf75",
       "status": "approved",
       "style_version": 1,
       "type": "scene"
@@ -675,7 +675,7 @@
         "n06_audiencia_muerte",
         "n06_audiencia_testimonio"
       ],
-      "source_signature": "sha256:604444b5e472faf31dcb2be474b437f25452ae3b13494eca186cb9ec4613f819",
+      "source_signature": "sha256:106977eff159fcb34da3f938e110fbfd2a71ccb1f0139a4e578295e152cb6bb3",
       "status": "approved",
       "style_version": 1,
       "type": "scene"
@@ -1147,6 +1147,14 @@
       "foco_tablilla_provisional": {
         "x": 0.38,
         "y": 0.62
+      },
+      "foco_cadena_reparada": {
+        "x": 0.5,
+        "y": 0.76
+      },
+      "foco_puerta_baja": {
+        "x": 0.7,
+        "y": 0.42
       }
     },
     "n02_liberar_albert": {
@@ -1159,6 +1167,14 @@
       "foco_tapa_cisterna": {
         "x": 0.37,
         "y": 0.6
+      },
+      "foco_fragmento_sello": {
+        "x": 0.53,
+        "y": 0.62
+      },
+      "foco_canal_desague": {
+        "x": 0.72,
+        "y": 0.48
       }
     },
     "n03_barranco_olivares": {
@@ -1219,6 +1235,26 @@
       "foco_mesa_provisional": {
         "x": 0.5,
         "y": 0.53
+      },
+      "foco_pozo_nuevo": {
+        "x": 0.72,
+        "y": 0.43
+      },
+      "foco_cuerda_audiencia": {
+        "x": 0.36,
+        "y": 0.59
+      },
+      "foco_tablilla_audiencia": {
+        "x": 0.45,
+        "y": 0.58
+      },
+      "foco_sello_audiencia": {
+        "x": 0.56,
+        "y": 0.58
+      },
+      "foco_eslabon_audiencia": {
+        "x": 0.64,
+        "y": 0.58
       }
     },
     "n06_audiencia_fraude": {
