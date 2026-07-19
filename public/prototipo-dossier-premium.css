@@ -48,6 +48,9 @@ body[data-ui="dossier-premium"] .ink-filter-defs {
 }
 
 body[data-ui="dossier-premium"] #gameScreen {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
   min-height: 100dvh;
   overflow: visible;
   padding: 0 0 env(safe-area-inset-bottom);
@@ -56,8 +59,9 @@ body[data-ui="dossier-premium"] #gameScreen {
 
 body[data-ui="dossier-premium"] .dossier-shell {
   width: min(100%, 780px);
-  margin: 0 auto;
+  margin-inline: 0;
   padding: 0;
+  justify-self: center;
 }
 
 body[data-ui="dossier-premium"] .artifact {

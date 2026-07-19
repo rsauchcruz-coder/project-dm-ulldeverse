@@ -146,6 +146,49 @@
     };
   }
 
+  function playerItem(world) {
+    const player = world.jugador || {};
+    const name = String(player.nombre || "").trim();
+    if (!name) return null;
+    return {
+      id: "jugador",
+      item: `${name} — ${player.rol || "Protagonista"}`,
+      descripcion: player.motivacion || "",
+    };
+  }
+
+  function playerInScene(world) {
+    const player = playerItem(world);
+    if (!player) return null;
+    return {
+      id: player.id,
+      name: String(player.item).split(/\s+[—-]\s+/)[0],
+      role_short: String(player.item).split(/\s+[—-]\s+/)[1] || "Protagonista",
+      description: player.descripcion,
+    };
+  }
+
+  const FOCUS_ENTITY_IDS = Object.freeze({
+    foco_cadena_reparada: "recurso:inv_eslabon_repuesto",
+    foco_cuerda_apeo: "recurso:inv_cuerda_apeo_marcada",
+    foco_tablilla_provisional: "recurso:inv_tablilla_reparto",
+    foco_fragmento_sello: "recurso:inv_fragmento_sello_registro",
+  });
+
+  function focusEntityId(focus) {
+    return focus?.entity_id || FOCUS_ENTITY_IDS[focus?.id] || null;
+  }
+
+  function objectiveItems(entity, world) {
+    const premise = world.premisa || {};
+    const general = premise.pregunta_dramatica || premise.promesa_jugable || "Resolver el expediente.";
+    const immediate = entity.nucleo_escenico || entity.situacion_visible || "Decidir el siguiente paso.";
+    return [
+      { id: "objetivo_general", item: "Objetivo general", descripcion: general },
+      { id: "objetivo_inmediato", item: "Objetivo inmediato", descripcion: immediate },
+    ];
+  }
+
   function currentEntity(world) {
     return world.nodos.find((node) => node.id === state.nodeId)
       || world.finales.find((ending) => ending.id === state.nodeId);
@@ -160,7 +203,7 @@
         : "Relación con Mateu en observación";
     return {
       interactuable: (entity.focos_consulta || []).map((focus) => ({
-        id: focus.id,
+        id: focusEntityId(focus) || focus.id,
         item: focus.etiqueta,
         descripcion: focus.descripcion || "",
       })),
@@ -170,8 +213,9 @@
         ...state.clues.map((id) => panelItem(id, world.pistas || []).item),
       ],
       peligros: [entity.presion_visible || `Nivel de presión: ${state.pressure}`],
-      objetivo: [entity.nucleo_escenico || entity.situacion_visible || "Resolver el expediente."],
-      personajes: (entity.personajes_visibles || []).map((name) => personItem(name, world)),
+      objetivo: objectiveItems(entity, world),
+      personajes: [playerItem(world), ...(entity.personajes_visibles || []).map((name) => personItem(name, world))]
+        .filter(Boolean),
     };
   }
 
@@ -194,7 +238,7 @@
     const text = [state.pendingConsequence, baseText].filter(Boolean).join("\n\n");
     const available = isFinal ? [] : (entity.opciones || []).filter(eligible);
     const relationshipValue = Number(state.variables?.confianza_albert || 0);
-    const visibleCharacters = (entity.personajes_visibles || []).map((name) => {
+    const visibleCharacters = [playerInScene(world), ...(entity.personajes_visibles || []).map((name) => {
       const person = world.pnj.find((entry) => entry.nombre_visible === name);
       return person
         ? {
@@ -204,12 +248,12 @@
             description: person.quiere || "",
           }
         : { id: null, name, role_short: "Presente", description: "" };
-    });
+    })].filter(Boolean);
     const focusPoints = (entity.focos_consulta || []).map((focus) => ({
       id: focus.id,
       label: focus.etiqueta,
       description: focus.descripcion || "",
-      entity_id: focus.entity_id || null,
+      entity_id: focusEntityId(focus),
     }));
     const structuredRoute = state.route.map((label) => ({ label, ubicacion: label }));
 
