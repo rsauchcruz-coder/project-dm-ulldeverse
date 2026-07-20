@@ -57,6 +57,16 @@ body[data-ui="dossier-premium"] #gameScreen {
   background: transparent;
 }
 
+/* El dossier no forma parte de la biblioteca. El estilo premium usa grid,
+   pero debe respetar el estado de pantalla controlado por el runtime. */
+body[data-ui="dossier-premium"] #gameScreen.screen {
+  display: none;
+}
+
+body[data-ui="dossier-premium"] #gameScreen.screen.active {
+  display: grid;
+}
+
 body[data-ui="dossier-premium"] .dossier-shell {
   width: min(100%, 780px);
   margin-inline: 0;
