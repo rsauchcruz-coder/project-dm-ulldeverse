@@ -28,6 +28,16 @@
     return [...new Set((values || []).filter(Boolean))];
   }
 
+  function pressureLimits(world) {
+    const range = world?.sistema_presion?.rango || {};
+    const min = Number(range.min ?? 0);
+    const max = Number(range.max ?? 5);
+    return {
+      min: Number.isFinite(min) ? min : 0,
+      max: Number.isFinite(max) && max >= min ? max : 5,
+    };
+  }
+
   async function loadWorld() {
     if (!worldPromise) {
       worldPromise = nativeFetch("/demo-world.json", { cache: "no-store" }).then((response) => {
@@ -111,7 +121,7 @@
     }
   }
 
-  function applyChanges(changes = {}) {
+  function applyChanges(changes = {}, world) {
     addAll(state.flags, changes.flags_set);
     removeAll(state.flags, changes.flags_unset);
     addAll(state.inventory, changes.inventario_agregar);
@@ -122,7 +132,8 @@
     for (const [key, delta] of Object.entries(changes.variables_delta || {})) {
       state.variables[key] = Number(state.variables[key] || 0) + Number(delta || 0);
     }
-    state.pressure = Math.max(0, Number(state.pressure || 0) + Number(changes.presion_delta || 0));
+    const limits = pressureLimits(world);
+    state.pressure = Math.max(limits.min, Math.min(limits.max, Number(state.pressure || 0) + Number(changes.presion_delta || 0)));
   }
 
   function panelItem(id, catalog, fallback, namespace = "") {
@@ -269,6 +280,7 @@
       entity_id: focusEntityId(focus),
     }));
     const structuredRoute = state.route.map((label) => ({ label, ubicacion: label }));
+    const limits = pressureLimits(world);
 
     return {
       node_id: entity.id,
@@ -293,10 +305,10 @@
       ui_state: {
         pressure: {
           name: "Cerco del castillo",
-          label: `${state.pressure}/8`,
+          label: `${state.pressure}/${limits.max}`,
           value: state.pressure,
-          min: 0,
-          max: 8,
+          min: limits.min,
+          max: limits.max,
         },
         relationship: {
           name: "Confianza de Mateu",
@@ -362,7 +374,7 @@
       .find((candidate) => normalise(candidate.texto) === normalise(actionText));
     if (!option) return { error: "Esa opción no está disponible en el estado actual." };
 
-    applyChanges(option.cambios_estado);
+    applyChanges(option.cambios_estado, world);
     state.nodeId = option.destino;
     state.pendingConsequence = option.consecuencia || "";
     state.recentActions.push(option.texto);
