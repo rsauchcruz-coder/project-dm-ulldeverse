@@ -247,8 +247,9 @@
       pressureName.textContent = pressure.name || "Presión";
       pressureLabel.textContent = pressure.label || `${pressure.value}/${pressure.max}`;
       const pressureRange = Math.max(1, Number(pressure.max) - Number(pressure.min));
-      const pressureCount = clamp(Math.round(((Number(pressure.value) - Number(pressure.min)) / pressureRange) * 8), 0, 8);
-      pressureDots.innerHTML = Array.from({ length: 8 }, (_, index) => `<i class="dot ${index < pressureCount ? "on" : ""}"></i>`).join("");
+      const pressureSteps = Math.max(1, Math.round(pressureRange));
+      const pressureCount = clamp(Math.round(((Number(pressure.value) - Number(pressure.min)) / pressureRange) * pressureSteps), 0, pressureSteps);
+      pressureDots.innerHTML = Array.from({ length: pressureSteps }, (_, index) => `<i class="dot ${index < pressureCount ? "on" : ""}"></i>`).join("");
 
       if (trustName) trustName.textContent = relationship.name || "Confianza";
       trustLabel.textContent = relationship.label || "Neutra";
