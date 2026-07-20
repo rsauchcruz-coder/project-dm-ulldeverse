@@ -15,7 +15,7 @@ Project DM: ULLDE:VERSE
 
 **Tagline**
 
-An AI-assisted factory for coherent, testable story worlds.
+An AI-assisted factory for coherent, testable interactive worlds for creators, culture and learning.
 
 **Gallery thumbnail**
 
@@ -26,12 +26,13 @@ Upload `docs/media/devpost-thumbnail.png`. It is a 1500 × 1000 PNG in Devpost's
 1. `docs/media/gallery/01-case-not-chat.png`
 2. `docs/media/gallery/02-visible-commitment.png`
 3. `docs/media/gallery/03-consequences-persist.png`
+4. `docs/media/gallery/04-build-week-evolution.png` (optional but recommended)
 
-Each image is a 1500 × 1000 public-safe composition captured from the deployed demo.
+The first three images are 1500 × 1000 public-safe compositions captured from the deployed demo. The optional fourth is a public-safe before/after composition: browser chrome, local paths and identity-bearing content are excluded.
 
 **Optional evidence attachment**
 
-If the form offers a supporting-file field, upload `output/pdf/project-dm-build-week-evidence.pdf`. The four-page PDF is public-safe, under 4 MB and summarizes the judged experience, before/after scope, commit trail, Codex/GPT-5.6 evidence policy and executable QA. It supplements, but does not replace, the required YouTube video, repository URL or private `/feedback` Session ID.
+If the form offers a supporting-file field, upload `output/pdf/project-dm-build-week-evidence.pdf`. The five-page PDF is public-safe, under 4 MB and summarizes the judged experience, visible before/after scope, commit trail, Codex/GPT-5.6 evidence policy and executable QA. It supplements, but does not replace, the required YouTube video, repository URL or private `/feedback` Session ID.
 
 **Track**
 
@@ -49,17 +50,19 @@ Codex, GPT-5.6, JavaScript, Node.js, Express, HTML, CSS, JSON, Cloudflare Worker
 
 ## Short description
 
-Project DM is an AI-assisted factory for creating small, coherent and verifiably playable narrative worlds. ULLDE:VERSE is its first complete vertical slice: a smartphone-first historical investigation in which every decision updates a canonical, testable case state.
+Project DM helps independent creators, educators and cultural organisations turn a defined premise into a short interactive world whose choices can be tested before it reaches players. ULLDE:VERSE is its first complete vertical slice: a smartphone-first historical investigation in which every decision updates a canonical, testable case state.
 
 ## Inspiration
 
 Generative narrative systems can produce vivid prose, but they are difficult to reproduce, debug and ship. A model may invent an exciting scene while forgetting an earlier promise, exposing an impossible option or ending the story generically.
 
-I wanted a player with no role-playing experience to open a short adventure, read, decide and immediately understand the consequences. At the same time, I wanted the production system behind that experience to behave more like a compiler and test suite than an unconstrained prompt.
+I wanted a player with no role-playing experience to open a short adventure, read, decide and immediately understand the consequences. I also wanted a practical path for a local-history educator, museum, writer or small creative team to make an interactive experience without hand-maintaining a fragile maze of branches. The production system behind that experience should behave more like a compiler and test suite than an unconstrained prompt.
 
 ## What it does
 
 Project DM turns confirmed human intent into a structured experience seed, a causal world architecture, a compiled runtime artifact and a set of executable quality gates.
+
+That makes a short world usable as more than entertainment: a cultural institution can turn a place or archive into an explorable case; an educator can frame a lesson around consequential decisions; and an independent creator can test whether a compact narrative remains coherent before publishing it. These are target use cases for the factory, not features claimed as already automated in this first vertical slice.
 
 ULLDE:VERSE presents the result as a mobile investigation dossier. In *El testigo de Ulldecona*, the player:
 
@@ -145,7 +148,7 @@ Project DM currently proves the factory with one finished world. The next steps 
 - record a continuous build of a new mini-world from human premise to passing QA;
 - reduce authoring time while preserving the same acceptance gates;
 - add reusable visual-production profiles;
-- test new worlds for families, local history, education and commissioned experiences;
+- pilot new worlds with local-history educators, cultural organisations and independent creators;
 - measure whether players perceive later consequences as genuinely caused by their earlier decisions.
 
 ## Testing instructions
@@ -190,5 +193,5 @@ The dated commit trail and primary Codex Session ID document this extension.
 1. **A case, not a chat** — The mobile dossier introduces the world, objective and current pressure without requiring role-playing knowledge.
 2. **A visible commitment** — The selected decision changes visually before execution, then updates the canonical case state.
 3. **Consequences that persist** — Routes, relationships, evidence and later possibilities remember earlier actions.
-4. **A factory behind the fiction** — Seed, authored architecture, compiler, canonical world and visual manifest form one traceable artifact chain.
+4. **From prototype to playable product** — The Build Week extension turns a private experiment into a public, guided dossier with visible state and reproducible QA.
 5. **Verification as a product feature** — Automated gates explore 1,143 valid routes and reject causal, runtime, mobile and deployment regressions.

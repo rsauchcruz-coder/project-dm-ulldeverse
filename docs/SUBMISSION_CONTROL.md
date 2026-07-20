@@ -105,7 +105,9 @@ Follow this sequence; do not improvise from older notes.
    `docs/DEVPOST_SUBMISSION.md`.
 5. Add the public demo and GitHub URLs from that same document.
 6. Upload `docs/media/devpost-thumbnail.png`.
-7. Upload the three gallery images in their numbered order.
+7. Upload the first three gallery images in their numbered order, then add the
+   optional fourth before/after image if Devpost accepts an additional gallery
+   slot.
 8. Add the public YouTube URL.
 9. Paste the private Director 2 `/feedback` Session ID into the dedicated form
    field, not into the public description.

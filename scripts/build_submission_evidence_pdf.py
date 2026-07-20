@@ -449,7 +449,29 @@ def build():
         )
     )
 
-    # Page 4 - technical evidence
+    # Page 4 - visible evolution
+    story.append(PageBreak())
+    story.append(Paragraph("Visible Build Week evolution", h1))
+    story.append(
+        Paragraph(
+            "This public-safe comparison deliberately distinguishes the earlier private prototype from the "
+            "submitted vertical slice. Browser chrome, local paths and identity-bearing material are excluded. "
+            "It is evidence of scope and productization, not a claim that the baseline itself was built during Build Week.",
+            body,
+        )
+    )
+    story.append(Spacer(1, 2 * mm))
+    story.append(image(MEDIA / "evidence" / "build-week-evolution.jpg", 174 * mm))
+    story.append(Spacer(1, 4 * mm))
+    story.append(
+        Paragraph(
+            "The evaluated extension makes the player journey legible: a mobile dossier, visible case state, deliberate choices, "
+            "evidence, persistent consequences and reproducible QA around one public world.",
+            quote,
+        )
+    )
+
+    # Page 5 - technical evidence
     story.append(PageBreak())
     story.append(Paragraph("Technical evidence", h1))
     story.append(Paragraph("One traceable artifact chain", h2))
